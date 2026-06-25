@@ -1,0 +1,23 @@
+% формирователь импульса по переднему фронту входного сигнала %
+
+SUBDESIGN imp_former1
+(
+	clk, in_sgn 	:		INPUT;
+	
+	out_imp 		:		OUTPUT;
+)
+
+VARIABLE
+	trg[2..0] 	:	DFF;
+
+BEGIN	
+	trg[0].clk = in_sgn;
+	trg[1].clk = clk;
+	trg[2].clk = clk;
+	trg[0].d = B"1";
+	trg[1].d = trg[0].q;
+	trg[2].d = trg[1].q;
+	trg[].clrn = !trg[2].q;
+		
+	out_imp = trg[1].q;
+END;

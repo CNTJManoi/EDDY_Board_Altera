@@ -1,0 +1,21 @@
+SUBDESIGN mux_control1
+(
+	cmd[3..0]			: INPUT;
+
+	mux_ctrl[1..0]		: OUTPUT;
+)
+BEGIN
+	IF (cmd[] == 3)  THEN	--
+		mux_ctrl[1] = B"1";
+		mux_ctrl[0] = B"1";
+	ELSE
+	IF (cmd6 # cmd12) THEN
+		mux_ctrl[1] = cmd6 # cmd12;
+		mux_ctrl[0] = cmd12;
+		ELSE
+		mux_ctrl[1] = B"0";
+		mux_ctrl[0] = B_S;
+	END IF;
+	END IF;
+		
+END;

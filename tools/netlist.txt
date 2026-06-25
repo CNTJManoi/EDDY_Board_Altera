@@ -1,0 +1,1621 @@
+=== SYMBOL INSTANCES (157) ===
+151      NOT              @(448, -536)
+    inp  IN             -> read_dd
+    out  OUT            -> read_d
+152      NOT              @(176, -464)
+    inp  IN             -> adc_start
+    out  OUT            -> start
+153      NOT              @(136, -320)
+    inp  IN             -> cmd15
+    out  OUT            -> cmd15_i
+155      NOT              @(184, -8)
+    inp  IN             -> PA4
+    out  OUT            -> SS
+156      NOT              @(472, 552)
+    inp  IN             -> (unnamed)
+    out  OUT            -> dac_stop
+157      NOT              @(832, 560)
+    inp  IN             -> (unnamed)
+    out  OUT            -> dac_run
+158      NOT              @(1584, -440)
+    inp  IN             -> d_run
+    out  OUT            -> (unnamed)
+159      NOT              @(296, -40)
+    inp  IN             -> SCK
+    out  OUT            -> SCK_I
+160      NOT              @(736, 48)
+    inp  IN             -> write_d
+    out  OUT            -> write_di
+161      NOT              @(768, 192)
+    inp  IN             -> cmd_w
+    out  OUT            -> (unnamed)
+162      NOT              @(-8, 1176)
+    inp  IN             -> r11
+    out  OUT            -> (unnamed)
+163      NOT              @(-16, 1376)
+    inp  IN             -> r12
+    out  OUT            -> (unnamed)
+inst     lpm_shiftreg16   @(680, 448)
+    inp  clock          -> SCK
+    inp  enable         -> SS
+    inp  shiftin        -> MOSI
+    out  q[15..0]       -> dsp_d[15..0]
+inst1    GND              @(-72, -184)
+    out  1              -> gn
+inst10   WIRE             @(1528, 416)
+    inp  IN             -> addr[0]
+    out  OUT            -> TEST0
+inst100  WIRE             @(1528, 608)
+    inp  IN             -> d_run
+    out  OUT            -> TEST4
+inst101  WIRE             @(1528, 640)
+    inp  IN             -> DD[0]
+    out  OUT            -> TEST5
+inst102  WIRE             @(1528, 672)
+    inp  IN             -> clr_dac
+    out  OUT            -> TEST6
+inst103  WIRE             @(1528, 704)
+    inp  IN             -> clk_a0
+    out  OUT            -> TEST7
+inst104  WIRE             @(1528, 736)
+    inp  IN             -> addr_en
+    out  OUT            -> TEST8
+inst105  WIRE             @(1528, 768)
+    inp  IN             -> mode[7]
+    out  OUT            -> TEST9
+inst106  WIRE             @(1528, 800)
+    inp  IN             -> ccc
+    out  OUT            -> TEST10
+inst107  WIRE             @(1528, 832)
+    inp  IN             -> adc_start
+    out  OUT            -> TEST11
+inst108  WIRE             @(1528, 864)
+    inp  IN             -> SCK
+    out  OUT            -> TEST12
+inst109  WIRE             @(1528, 896)
+    inp  IN             -> SS
+    out  OUT            -> TEST13
+inst11   OR6              @(1056, 96)
+    inp  IN1            -> cmd1
+    inp  IN3            -> cmd9
+    inp  IN2            -> cmd14
+    inp  IN4            -> cmd11
+    inp  IN5            -> cmd12
+    inp  IN6            -> gn
+    out  OUT            -> cmd_w
+inst110  imp_former1      @(1808, -600)
+    inp  clk            -> clko[0]
+    inp  in_sgn         -> (unnamed)
+    out  out_imp        -> out_addr
+inst111  WIRE             @(1528, 928)
+    inp  IN             -> Read_DAC
+    out  OUT            -> TEST14
+inst112  WIRE             @(1528, 960)
+    inp  IN             -> Write_DAC
+    out  OUT            -> TEST15
+inst113  DFF              @(1296, 944)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q12
+    inp  PRN            -> vc
+    out  Q              -> cmd12
+inst114  hex_ff           @(1544, 1208)
+    inp  data[15..0]    -> dsp_d[15..0]
+    inp  clock          -> clk
+    inp  enable         -> wr12
+    out  q[15..0]       -> cmpr[15..0]
+inst115  AND2             @(1440, 1248)
+    inp  IN1            -> cmd12
+    inp  IN2            -> write_d
+    out  OUT            -> wr12
+inst116  cmp8             @(328, 1088)
+    inp  dataa[7..0]    -> cnt1[7..0]
+    inp  datab[7..0]    -> delay[7..0]
+    out  aeb            -> (unnamed)
+inst117  count256         @(136, 1056)
+    inp  clock          -> C0DCO
+    inp  clk_en         -> clk1_en
+    inp  aclr           -> r11
+    out  cout           -> (unnamed)
+    out  q[7..0]        -> cnt1[7..0]
+inst118  DFF              @(504, 1120)
+    inp  CLRN           -> vc
+    inp  CLK            -> clk64
+    inp  D              -> (unnamed)
+    inp  PRN            -> vc
+    out  Q              -> (unnamed)
+inst119  imp_former1      @(608, 1096)
+    inp  clk            -> clk64
+    inp  in_sgn         -> (unnamed)
+    out  out_imp        -> r11
+inst12   GLOBAL           @(224, -592)
+    inp  IN             -> clk64
+    out  OUT            -> clk
+inst120  DFF              @(16, 1080)
+    inp  CLRN           -> (unnamed)
+    inp  CLK            -> gn
+    inp  D              -> gn
+    inp  PRN            -> cmp_lh1
+    out  Q              -> clk1_en
+inst121  NOR2             @(-32, 1024)
+    inp  IN2            -> cmp_h1
+    inp  IN1            -> cmp_l1
+    out  OUT            -> cmp_lh1
+inst122  cmp8             @(328, 1232)
+    inp  dataa[7..0]    -> (unnamed)
+    inp  datab[7..0]    -> delay[15..8]
+    out  aeb            -> (unnamed)
+inst123  DFF              @(504, 1264)
+    inp  CLRN           -> vc
+    inp  CLK            -> clk64
+    inp  D              -> (unnamed)
+    inp  PRN            -> vc
+    out  Q              -> (unnamed)
+inst124  imp_former1      @(608, 1240)
+    inp  clk            -> clk64
+    inp  in_sgn         -> (unnamed)
+    out  out_imp        -> r12
+inst125  OR2              @(760, 1240)
+    inp  IN2            -> r12
+    inp  IN1            -> r11
+    out  OUT            -> out_ad1
+inst126  mux21            @(928, 1048)
+    inp  data1          -> C0DCO
+    inp  data0          -> out_ad1
+    inp  sel            -> mode[7]
+    out  result         -> ad_clk0
+inst127  mux21            @(1168, 1048)
+    inp  data1          -> C1DCO
+    inp  data0          -> out_ad1
+    inp  sel            -> mode[7]
+    out  result         -> ad_clk1
+inst128  mux21            @(928, 1160)
+    inp  data1          -> C2DCO
+    inp  data0          -> out_ad1
+    inp  sel            -> mode[7]
+    out  result         -> ad_clk2
+inst129  mux21            @(1168, 1160)
+    inp  data1          -> C3DCO
+    inp  data0          -> out_ad1
+    inp  sel            -> mode[7]
+    out  result         -> ad_clk3
+inst13   constA5          @(408, 912)
+    out  result[7..0]   -> cnst[7..0]
+inst130  count256         @(136, 1256)
+    inp  clock          -> C0DCO
+    inp  clk_en         -> (unnamed)
+    inp  aclr           -> r12
+    out  cout           -> (unnamed)
+    out  q[7..0]        -> (unnamed)
+inst131  DFF              @(8, 1280)
+    inp  CLRN           -> (unnamed)
+    inp  CLK            -> gn
+    inp  D              -> gn
+    inp  PRN            -> cmp_lh1
+    out  Q              -> (unnamed)
+inst132  adc_cmp_h        @(1024, 1336)
+    inp  dataa[13..0]   -> C1DD[13..0]
+    inp  datab[13..0]   -> cmpr[13..0]
+    out  ageb           -> h1
+    out  aleb           -> l1
+inst133  cnt8             @(1192, 1336)
+    inp  clock          -> h1
+    out  q[7..0]        -> hi[7..0]
+inst134  cnt8             @(1192, 1400)
+    inp  clock          -> l1
+    out  q[7..0]        -> lo[7..0]
+inst135  imp_former1      @(1080, 1512)
+    inp  clk            -> clk64
+    inp  in_sgn         -> rzh1
+    out  out_imp        -> cmp_h1
+inst136  imp_former1      @(1080, 1608)
+    inp  clk            -> clk64
+    inp  in_sgn         -> rzl1
+    out  out_imp        -> cmp_l1
+inst137  mux4_1           @(776, 1368)
+    inp  data3          -> hi[5]
+    inp  data2          -> hi[3]
+    inp  data1          -> hi[1]
+    inp  data0          -> h1
+    inp  sel[1..0]      -> c3,c2
+    out  result         -> rzh1
+inst138  mux4_1           @(800, 1512)
+    inp  data3          -> lo[5]
+    inp  data2          -> lo[3]
+    inp  data1          -> lo[1]
+    inp  data0          -> l1
+    inp  sel[1..0]      -> c3,c2
+    out  result         -> rzl1
+inst139  WIRE             @(600, 1488)
+    inp  IN             -> mode[0]
+    out  OUT            -> c2
+inst14   DAC_RAM          @(1472, -184)
+    inp  data[13..0]    -> dsp_d[13..0]
+    inp  wren           -> cmd1
+    inp  address[13..0] -> addr[13..0]
+    inp  inclock        -> clk_in
+    out  q[13..0]       -> DD[13..0]
+inst140  WIRE             @(600, 1520)
+    inp  IN             -> mode[1]
+    out  OUT            -> c3
+inst141  hex_ff           @(1544, 1304)
+    inp  data[15..0]    -> gn,gn,DD[13..0]
+    inp  clock          -> clk64
+    inp  enable         -> vc
+    out  q[15..0]       -> C1DD[15..0]
+inst142  DFF              @(976, 920)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q9
+    inp  PRN            -> vc
+    out  Q              -> cmd9
+inst143  hex_ff           @(1544, 1016)
+    inp  data[15..0]    -> dsp_d[15..0]
+    inp  clock          -> clk
+    inp  enable         -> wr9
+    out  q[15..0]       -> mode[15..0]
+inst144  AND2             @(1440, 1056)
+    inp  IN1            -> cmd9
+    inp  IN2            -> write_d
+    out  OUT            -> wr9
+inst145  NOR3             @(1280, -416)
+    inp  IN1            -> cmd1
+    inp  IN2            -> cmd13
+    inp  IN3            -> adr_clr
+    out  OUT            -> adr_en
+inst15   compar_addr      @(1488, -608)
+    inp  dataa[13..0]   -> addr[13..0]
+    inp  datab[13..0]   -> cmp[13..0]
+    out  aeb            -> (unnamed)
+inst16   AND2             @(872, -400)
+    inp  IN1            -> cmd1
+    inp  IN2            -> write_di
+    out  OUT            -> Write_DAC
+inst17   count_dac        @(1256, -584)
+    inp  clock          -> ccc
+    inp  clk_en         -> addr_en
+    inp  aclr           -> clr_dac
+    out  cout           -> (unnamed)
+    out  q[13..0]       -> addr[13..0]
+inst18   OR2              @(1136, -576)
+    inp  IN2            -> (unnamed)
+    inp  IN1            -> Write_DAC
+    out  OUT            -> ccc
+inst19   GND              @(760, 720)
+    out  1              -> (unnamed)
+inst2    VCC              @(-72, -216)
+    out  1              -> vc
+inst20   AND2             @(872, -352)
+    inp  IN1            -> cmd13
+    inp  IN2            -> read_d
+    out  OUT            -> Read_DAC
+inst22   hex_ff           @(1056, 408)
+    inp  data[15..0]    -> dsp_d[15..0]
+    inp  clock          -> clk
+    inp  enable         -> wr14
+    out  q[15..0]       -> cmp[15..0]
+inst23   mux21            @(1224, -120)
+    inp  data1          -> clk64
+    inp  data0          -> (unnamed)
+    inp  sel            -> cmd2
+    out  result         -> clk_in
+inst24   mux16_8          @(824, 712)
+    inp  data7x[15..0]  -> (unnamed)
+    inp  data6x[15..0]  -> cnst[7..0],gn,freq[1..0],d_run,FULL3,FULL2,FULL1,FULL0
+    inp  data5x[15..0]  -> cmpr[15..0]
+    inp  data4x[15..0]  -> delay[15..0]
+    inp  data3x[15..0]  -> gn,gn,ADC[13..0]
+    inp  data2x[15..0]  -> cmp[15..0]
+    inp  data1x[15..0]  -> gn,gn,DD[13..0]
+    inp  data0x[15..0]  -> mode[15..0]
+    inp  sel[2..0]      -> MX_CTRL[2..0]
+    out  result[15..0]  -> O_DAT[15..0]
+inst25   dc16             @(584, -544)
+    inp  data[3..0]     -> cmd[3..0]
+    out  eq0            -> (unnamed)
+    out  eq1            -> q1
+    out  eq2            -> q2
+    out  eq3            -> q3
+    out  eq4            -> q4
+    out  eq5            -> q5
+    out  eq6            -> q6
+    out  eq7            -> q7
+    out  eq8            -> q8
+    out  eq9            -> q9
+    out  eq10           -> q10
+    out  eq11           -> q11
+    out  eq12           -> q12
+    out  eq13           -> q13
+    out  eq14           -> q14
+    out  eq15           -> (unnamed)
+inst26   dc_24            @(1000, 240)
+    inp  data[1..0]     -> control[1..0]
+    inp  enable         -> vc
+    out  eq0            -> DAC_CS[0]
+    out  eq1            -> DAC_CS[1]
+    out  eq2            -> DAC_CS[2]
+    out  eq3            -> DAC_CS[3]
+inst27   OR3              @(1008, -272)
+    inp  IN2            -> cmd13
+    inp  IN3            -> cmd2
+    inp  IN1            -> cmd1
+    out  OUT            -> cmd_dac
+inst28   OR2              @(1032, -160)
+    inp  IN2            -> cmd13
+    inp  IN1            -> cmd1
+    out  OUT            -> cmd_d
+inst29   AND2             @(344, -440)
+    inp  IN1            -> ad_clk0
+    inp  IN2            -> v0
+    out  OUT            -> clk_a0
+inst3    ADC_RAM          @(696, -784)
+    inp  data[13..0]    -> C0D[13..0]
+    inp  wrreq          -> v0
+    inp  rdreq          -> cmd3
+    inp  clock          -> adc_clk0
+    inp  aclr           -> cmd15
+    out  q[13..0]       -> ADC0[13..0]
+    out  full           -> FULL0
+    out  empty          -> EMPTY0
+    out  usedw[13..0]   -> usedw0[13..0]
+inst30   mux21            @(528, -664)
+    inp  data1          -> read_d0
+    inp  data0          -> clk_a0
+    inp  sel            -> cmd3
+    out  result         -> adc_clk0
+inst31   AND2             @(952, 448)
+    inp  IN1            -> cmd14
+    inp  IN2            -> write_d
+    out  OUT            -> wr14
+inst32   OR2              @(1672, -304)
+    inp  IN2            -> out_addr
+    inp  IN1            -> adr_clr
+    out  OUT            -> clr_dac
+inst33   hex_ff           @(1544, 1112)
+    inp  data[15..0]    -> dsp_d[15..0]
+    inp  clock          -> clk
+    inp  enable         -> wr11
+    out  q[15..0]       -> delay[15..0]
+inst34   OR2              @(1368, -272)
+    inp  IN2            -> a_en
+    inp  IN1            -> d_run
+    out  OUT            -> addr_en
+inst35   WIRE             @(1528, 448)
+    inp  IN             -> read_dd
+    out  OUT            -> TEST1
+inst36   dc_24            @(1472, -56)
+    inp  data[1..0]     -> control[1..0]
+    inp  enable         -> read_dd
+    out  eq0            -> read_d0
+    out  eq1            -> read_d1
+    out  eq2            -> read_d2
+    out  eq3            -> read_d3
+inst37   AND2             @(1664, -408)
+    inp  IN1            -> (unnamed)
+    inp  IN2            -> (unnamed)
+    out  OUT            -> adr_clr
+inst38   AND2             @(1272, 64)
+    inp  IN1            -> clk50
+    inp  IN2            -> vc
+    out  OUT            -> (unnamed)
+inst39   NAND2            @(1272, 264)
+    inp  IN2            -> vc
+    inp  IN1            -> clk64
+    out  OUT            -> (unnamed)
+inst4    pll_16_100       @(80, -288)
+    inp  inclk0         -> 16MHz
+    out  c0             -> clk64
+    out  c1             -> (unnamed)
+inst40   t_count          @(792, -96)
+    inp  clock          -> clk50
+    inp  aclr           -> adr_clr
+    out  q[3..0]        -> t_clk[3..0]
+inst41   AND2             @(768, 112)
+    inp  IN1            -> s_load
+    inp  IN2            -> cmd_w
+    out  OUT            -> write_d
+inst42   AND2             @(880, 192)
+    inp  IN1            -> (unnamed)
+    inp  IN2            -> s_read
+    out  OUT            -> read_dd
+inst43   NAND2            @(1104, -88)
+    inp  IN2            -> cmd_d
+    inp  IN1            -> clk
+    out  OUT            -> (unnamed)
+inst44   WIRE             @(1528, 480)
+    inp  IN             -> write_d
+    out  OUT            -> TEST2
+inst45   WIRE             @(1528, 512)
+    inp  IN             -> MISO
+    out  OUT            -> TEST3
+inst46   ALT_OUTBUF_DIFF  @(1384, 112)
+    inp  i              -> (unnamed)
+    out  obar           -> ADC1_CLKN
+    out  o              -> ADC1_CLKP
+inst47   ALT_OUTBUF_DIFF  @(1384, 160)
+    inp  i              -> (unnamed)
+    out  obar           -> ADC2_CLKN
+    out  o              -> ADC2_CLKP
+inst48   ALT_OUTBUF_DIFF  @(1384, 208)
+    inp  i              -> (unnamed)
+    out  obar           -> ADC3_CLKN
+    out  o              -> ADC3_CLKP
+inst49   WIRE             @(1528, 544)
+    inp  IN             -> MISO
+    out  OUT            -> PB4
+inst5    mux21            @(960, -592)
+    inp  data1          -> clk64
+    inp  data0          -> Read_DAC
+    inp  sel            -> cmd2
+    out  result         -> (unnamed)
+inst50   mux13_4          @(344, 632)
+    inp  data3x[13..0]  -> ADC3[13..0]
+    inp  data2x[13..0]  -> ADC2[13..0]
+    inp  data1x[13..0]  -> ADC1[13..0]
+    inp  data0x[13..0]  -> ADC0[13..0]
+    inp  sel[1..0]      -> control[1..0]
+    out  result[13..0]  -> ADC[13..0]
+inst51   AND2             @(1440, 1152)
+    inp  IN1            -> cmd11
+    inp  IN2            -> write_d
+    out  OUT            -> wr11
+inst52   DFF              @(784, -520)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q1
+    inp  PRN            -> vc
+    out  Q              -> cmd1
+inst53   DFF              @(768, -296)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> (unnamed)
+    inp  PRN            -> vc
+    out  Q              -> cmd15
+inst54   DFF              @(1216, 560)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q2
+    inp  PRN            -> vc
+    out  Q              -> cmd2
+inst55   DFF              @(1072, -496)
+    inp  CLRN           -> vc
+    inp  CLK            -> out_addr
+    inp  D              -> gn
+    inp  PRN            -> adr_en
+    out  Q              -> a_en
+inst56   DFF              @(256, 56)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q10
+    inp  PRN            -> vc
+    out  Q              -> cmd10
+inst57   DFF              @(248, -400)
+    inp  CLRN           -> cmd15_i
+    inp  CLK            -> FULL0
+    inp  D              -> gn
+    inp  PRN            -> start
+    out  Q              -> v0
+inst58   DFF              @(1056, 560)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q3
+    inp  PRN            -> vc
+    out  Q              -> cmd3
+inst59   DFF              @(1688, -576)
+    inp  CLRN           -> vc
+    inp  CLK            -> clk64
+    inp  D              -> (unnamed)
+    inp  PRN            -> vc
+    out  Q              -> (unnamed)
+inst6    lpm_counter0     @(400, -256)
+    inp  clock          -> clk64
+    out  q[7..0]        -> clko[7..0]
+inst60   DFF              @(1256, -280)
+    inp  CLRN           -> dac_stop
+    inp  CLK            -> /rst
+    inp  D              -> gn
+    inp  PRN            -> dac_run
+    out  Q              -> d_run
+inst61   DFF              @(48, 64)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q14
+    inp  PRN            -> vc
+    out  Q              -> cmd14
+inst62   WIRE             @(248, 416)
+    inp  IN             -> PD[3..0]
+    out  OUT            -> cmd[3..0]
+inst63   WIRE             @(248, 456)
+    inp  IN             -> PD[7..4]
+    out  OUT            -> control[3..0]
+inst64   DFF              @(1216, 704)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q5
+    inp  PRN            -> vc
+    out  Q              -> cmd5
+inst65   WIRE             @(192, 192)
+    inp  IN             -> PE2
+    out  OUT            -> DAC_CLK
+inst66   ADC_RAM          @(1016, -784)
+    inp  data[13..0]    -> C1D[13..0]
+    inp  wrreq          -> v1
+    inp  rdreq          -> cmd3
+    inp  clock          -> adc_clk1
+    inp  aclr           -> cmd15
+    out  q[13..0]       -> ADC1[13..0]
+    out  full           -> FULL1
+    out  empty          -> EMPTY1
+    out  usedw[13..0]   -> (unnamed)
+inst67   ADC_RAM          @(1328, -784)
+    inp  data[13..0]    -> C2D[13..0]
+    inp  wrreq          -> v2
+    inp  rdreq          -> cmd3
+    inp  clock          -> adc_clk2
+    inp  aclr           -> cmd15
+    out  q[13..0]       -> ADC2[13..0]
+    out  full           -> FULL2
+    out  empty          -> EMPTY2
+    out  usedw[13..0]   -> (unnamed)
+inst68   ADC_RAM          @(1640, -784)
+    inp  data[13..0]    -> C3D[13..0]
+    inp  wrreq          -> v3
+    inp  rdreq          -> cmd3
+    inp  clock          -> adc_clk3
+    inp  aclr           -> cmd15
+    out  q[13..0]       -> ADC3[13..0]
+    out  full           -> FULL3
+    out  empty          -> EMPTY3
+    out  usedw[13..0]   -> (unnamed)
+inst69   AND2             @(152, 592)
+    inp  IN1            -> v1
+    inp  IN2            -> ad_clk1
+    out  OUT            -> clk_a1
+inst7    ALT_OUTBUF_DIFF  @(1384, 64)
+    inp  i              -> (unnamed)
+    out  obar           -> ADC0_CLKN
+    out  o              -> ADC0_CLKP
+inst70   AND2             @(152, 712)
+    inp  IN1            -> v2
+    inp  IN2            -> ad_clk2
+    out  OUT            -> clk_a2
+inst71   AND2             @(152, 864)
+    inp  IN1            -> v3
+    inp  IN2            -> ad_clk3
+    out  OUT            -> (unnamed)
+inst72   DFF              @(0, 584)
+    inp  CLRN           -> cmd15_i
+    inp  CLK            -> FULL1
+    inp  D              -> gn
+    inp  PRN            -> start
+    out  Q              -> v1
+inst73   DFF              @(0, 704)
+    inp  CLRN           -> cmd15_i
+    inp  CLK            -> FULL2
+    inp  D              -> gn
+    inp  PRN            -> start
+    out  Q              -> v2
+inst74   DFF              @(0, 856)
+    inp  CLRN           -> cmd15_i
+    inp  CLK            -> FULL3
+    inp  D              -> gn
+    inp  PRN            -> start
+    out  Q              -> v3
+inst75   mux21            @(272, 832)
+    inp  data1          -> read_d3
+    inp  data0          -> (unnamed)
+    inp  sel            -> cmd3
+    out  result         -> adc_clk3
+inst76   mux21            @(368, 976)
+    inp  data1          -> read_d2
+    inp  data0          -> clk_a2
+    inp  sel            -> cmd3
+    out  result         -> adc_clk2
+inst77   mux21            @(584, 976)
+    inp  data1          -> read_d1
+    inp  data0          -> clk_a1
+    inp  sel            -> cmd3
+    out  result         -> adc_clk1
+inst78   mux4_1           @(648, -224)
+    inp  data3          -> clko[2]
+    inp  data2          -> clko[1]
+    inp  data1          -> clko[0]
+    inp  data0          -> clk64
+    inp  sel[1..0]      -> freq[1..0]
+    out  result         -> clk50
+inst79   WIRE             @(448, -168)
+    inp  IN             -> PD[8]
+    out  OUT            -> freq[0]
+inst8    ALT_OUTBUF_DIFF  @(1384, 264)
+    inp  i              -> (unnamed)
+    out  obar           -> DAC_CLKN
+    out  o              -> DAC_CLKP
+inst80   WIRE             @(448, -136)
+    inp  IN             -> PD[9]
+    out  OUT            -> freq[1]
+inst81   DFF              @(1128, 952)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q11
+    inp  PRN            -> vc
+    out  Q              -> cmd11
+inst82   WIRE             @(192, 224)
+    inp  IN             -> PE6
+    out  OUT            -> DAC_DATA
+inst83   WIRE             @(184, -72)
+    inp  IN             -> PB5
+    out  OUT            -> MOSI
+inst84   WIRE             @(184, -40)
+    inp  IN             -> PA5
+    out  OUT            -> SCK
+inst85   DFF              @(1112, 808)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q6
+    inp  PRN            -> vc
+    out  Q              -> cmd6
+inst86   DFF              @(1048, 696)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q7
+    inp  PRN            -> vc
+    out  Q              -> cmd7
+inst87   WIRE             @(1528, 576)
+    inp  IN             -> FULL0
+    out  OUT            -> PB2
+inst88   mx_ctrl          @(1216, 320)
+    inp  cmd[3..0]      -> cmd[3..0]
+    out  mux_ctrl[2..0] -> MX_CTRL[2..0]
+inst89   DFF              @(1272, 824)
+    inp  CLRN           -> vc
+    inp  CLK            -> clko[0]
+    inp  D              -> q13
+    inp  PRN            -> vc
+    out  Q              -> cmd13
+inst9    WIRE             @(-16, -184)
+    inp  IN             -> gn
+    out  OUT            -> uuy
+inst90   OR2              @(232, 280)
+    inp  IN2            -> read_dd
+    inp  IN1            -> write_d
+    out  OUT            -> STLD
+inst91   imp_former1      @(1496, -408)
+    inp  clk            -> clko[0]
+    inp  in_sgn         -> cmd_dac
+    out  out_imp        -> (unnamed)
+inst92   imp_former1      @(568, 96)
+    inp  clk            -> clk64
+    inp  in_sgn         -> PA4
+    out  out_imp        -> s_load
+inst93   imp_former1      @(1000, 0)
+    inp  clk            -> clko[0]
+    inp  in_sgn         -> cmd2
+    out  out_imp        -> adc_start
+inst94   imp_former1      @(704, 544)
+    inp  clk            -> clko[0]
+    inp  in_sgn         -> cmd6
+    out  out_imp        -> (unnamed)
+inst95   imp_former1      @(344, 536)
+    inp  clk            -> clko[0]
+    inp  in_sgn         -> cmd7
+    out  out_imp        -> (unnamed)
+inst96   imp_former1      @(568, 0)
+    inp  clk            -> clk64
+    inp  in_sgn         -> SS
+    out  out_imp        -> s_read
+inst97   74165_a          @(520, 192)
+    inp  SER            -> gn
+    inp  CLK            -> SCK_I
+    inp  ENA            -> SS
+    inp  STLD           -> STLD
+    inp  D[7..0]        -> O_DAT[7..0]
+    out  QH             -> s1
+inst98   74165_a          @(520, 320)
+    inp  SER            -> s1
+    inp  CLK            -> SCK_I
+    inp  ENA            -> SS
+    inp  STLD           -> STLD
+    inp  D[7..0]        -> O_DAT[15..8]
+    out  QH             -> MISO
+inst99   WIRE             @(328, -704)
+    inp  IN             -> vc
+    out  OUT            -> /rst
+
+=== TOP-LEVEL PINS (48) ===
+input  16MHz          -> 16MHz
+output ADC0_CLKN      -> ADC0_CLKN
+output ADC0_CLKP      -> ADC0_CLKP
+output ADC1_CLKN      -> ADC1_CLKN
+output ADC1_CLKP      -> ADC1_CLKP
+output ADC2_CLKN      -> ADC2_CLKN
+output ADC2_CLKP      -> ADC2_CLKP
+output ADC3_CLKN      -> ADC3_CLKN
+output ADC3_CLKP      -> ADC3_CLKP
+input  BRD[3..0]      -> BRD[3..0]
+input  C0DCO          -> C0DCO
+input  C0D[13..0]     -> C0D[13..0]
+input  C1DCO          -> C1DCO
+input  C1D[13..0]     -> C1D[13..0]
+input  C2DCO          -> C2DCO
+input  C2D[13..0]     -> C2D[13..0]
+input  C3DCO          -> C3DCO
+input  C3D[13..0]     -> C3D[13..0]
+output DAC_CLK        -> DAC_CLK
+output DAC_CLKN       -> DAC_CLKN
+output DAC_CLKP       -> DAC_CLKP
+output DAC_CS[3..0]   -> DAC_CS[3..0]
+output DAC_DATA       -> DAC_DATA
+output DD[13..0]      -> DD[13..0]
+input  PA4            -> PA4
+input  PA5            -> PA5
+output PB2            -> PB2
+output PB4            -> PB4
+input  PB5            -> PB5
+input  PD[10..0]      -> PD[10..0]
+input  PE2            -> PE2
+input  PE6            -> PE6
+output TEST0          -> TEST0
+output TEST1          -> TEST1
+output TEST10         -> TEST10
+output TEST11         -> TEST11
+output TEST12         -> TEST12
+output TEST13         -> TEST13
+output TEST14         -> TEST14
+output TEST15         -> TEST15
+output TEST2          -> TEST2
+output TEST3          -> TEST3
+output TEST4          -> TEST4
+output TEST5          -> TEST5
+output TEST6          -> TEST6
+output TEST7          -> TEST7
+output TEST8          -> TEST8
+output TEST9          -> TEST9
+
+=== UNNAMED MULTI-TERMINAL NETS ===
+NET (unnamed @(1360, 232))
+    inst38   AND2           out  OUT
+    inst46   ALT_OUTBUF_DIFF inp  i
+    inst47   ALT_OUTBUF_DIFF inp  i
+    inst48   ALT_OUTBUF_DIFF inp  i
+    inst7    ALT_OUTBUF_DIFF inp  i
+NET (unnamed @(1336, 288))
+    inst39   NAND2          out  OUT
+    inst8    ALT_OUTBUF_DIFF inp  i
+NET (unnamed @(768, -272))
+    inst25   dc16           out  eq15
+    inst53   DFF            inp  D
+NET (unnamed @(1136, -544))
+    inst18   OR2            inp  IN2
+    inst5    mux21          out  result
+NET (unnamed @(1224, -64))
+    inst23   mux21          inp  data0
+    inst43   NAND2          out  OUT
+NET (unnamed @(1664, -376))
+    inst37   AND2           inp  IN2
+    inst91   imp_former1    out  out_imp
+NET (unnamed @(272, 888))
+    inst71   AND2           out  OUT
+    inst75   mux21          inp  data0
+NET (unnamed @(880, 208))
+    161      NOT            out  OUT
+    inst42   AND2           inp  IN1
+NET (unnamed @(472, 568))
+    156      NOT            inp  IN
+    inst95   imp_former1    out  out_imp
+NET (unnamed @(832, 576))
+    157      NOT            inp  IN
+    inst94   imp_former1    out  out_imp
+NET (unnamed @(1688, -552))
+    inst15   compar_addr    out  aeb
+    inst59   DFF            inp  D
+NET (unnamed @(1808, -552))
+    inst110  imp_former1    inp  in_sgn
+    inst59   DFF            out  Q
+NET (unnamed @(1664, -392))
+    158      NOT            out  OUT
+    inst37   AND2           inp  IN1
+NET (unnamed @(504, 1144))
+    inst116  cmp8           out  aeb
+    inst118  DFF            inp  D
+NET (unnamed @(608, 1144))
+    inst118  DFF            out  Q
+    inst119  imp_former1    inp  in_sgn
+NET (unnamed @(40, 1192))
+    162      NOT            out  OUT
+    inst120  DFF            inp  CLRN
+NET (unnamed @(280, 1280))
+    inst122  cmp8           inp  dataa[7..0]
+    inst130  count256       out  q[7..0]
+NET (unnamed @(504, 1288))
+    inst122  cmp8           out  aeb
+    inst123  DFF            inp  D
+NET (unnamed @(608, 1288))
+    inst123  DFF            out  Q
+    inst124  imp_former1    inp  in_sgn
+NET (unnamed @(136, 1304))
+    inst130  count256       inp  clk_en
+    inst131  DFF            out  Q
+NET (unnamed @(32, 1392))
+    163      NOT            out  OUT
+    inst131  DFF            inp  CLRN
+NET (unnamed @(824, 752))
+    inst19   GND            out  1
+    inst24   mux16_8        inp  data7x[15..0]
+
+=== NAMED NETS ===
+NET /rst
+    inst60   DFF            inp  CLK
+    inst99   WIRE           out  OUT
+NET 16MHz
+    PIN  input  16MHz
+    inst4    pll_16_100     inp  inclk0
+NET ADC0[13..0]
+    inst3    ADC_RAM        out  q[13..0]
+    inst50   mux13_4        inp  data0x[13..0]
+NET ADC0_CLKN
+    PIN  output ADC0_CLKN
+    inst7    ALT_OUTBUF_DIFF out  obar
+NET ADC0_CLKP
+    PIN  output ADC0_CLKP
+    inst7    ALT_OUTBUF_DIFF out  o
+NET ADC1[13..0]
+    inst50   mux13_4        inp  data1x[13..0]
+    inst66   ADC_RAM        out  q[13..0]
+NET ADC1_CLKN
+    PIN  output ADC1_CLKN
+    inst46   ALT_OUTBUF_DIFF out  obar
+NET ADC1_CLKP
+    PIN  output ADC1_CLKP
+    inst46   ALT_OUTBUF_DIFF out  o
+NET ADC2[13..0]
+    inst50   mux13_4        inp  data2x[13..0]
+    inst67   ADC_RAM        out  q[13..0]
+NET ADC2_CLKN
+    PIN  output ADC2_CLKN
+    inst47   ALT_OUTBUF_DIFF out  obar
+NET ADC2_CLKP
+    PIN  output ADC2_CLKP
+    inst47   ALT_OUTBUF_DIFF out  o
+NET ADC3[13..0]
+    inst50   mux13_4        inp  data3x[13..0]
+    inst68   ADC_RAM        out  q[13..0]
+NET ADC3_CLKN
+    PIN  output ADC3_CLKN
+    inst48   ALT_OUTBUF_DIFF out  obar
+NET ADC3_CLKP
+    PIN  output ADC3_CLKP
+    inst48   ALT_OUTBUF_DIFF out  o
+NET ADC[13..0]
+    inst50   mux13_4        out  result[13..0]
+NET BRD[3..0]
+    PIN  input  BRD[3..0]
+NET C0DCO
+    PIN  input  C0DCO
+    inst117  count256       inp  clock
+    inst126  mux21          inp  data1
+    inst130  count256       inp  clock
+NET C0D[13..0]
+    PIN  input  C0D[13..0]
+    inst3    ADC_RAM        inp  data[13..0]
+NET C1DCO
+    PIN  input  C1DCO
+    inst127  mux21          inp  data1
+NET C1DD[13..0]
+    inst132  adc_cmp_h      inp  dataa[13..0]
+NET C1DD[15..0]
+    inst141  hex_ff         out  q[15..0]
+NET C1D[13..0]
+    PIN  input  C1D[13..0]
+    inst66   ADC_RAM        inp  data[13..0]
+NET C2DCO
+    PIN  input  C2DCO
+    inst128  mux21          inp  data1
+NET C2D[13..0]
+    PIN  input  C2D[13..0]
+    inst67   ADC_RAM        inp  data[13..0]
+NET C3DCO
+    PIN  input  C3DCO
+    inst129  mux21          inp  data1
+NET C3D[13..0]
+    PIN  input  C3D[13..0]
+    inst68   ADC_RAM        inp  data[13..0]
+NET DAC_CLK
+    PIN  output DAC_CLK
+    inst65   WIRE           out  OUT
+NET DAC_CLKN
+    PIN  output DAC_CLKN
+    inst8    ALT_OUTBUF_DIFF out  obar
+NET DAC_CLKP
+    PIN  output DAC_CLKP
+    inst8    ALT_OUTBUF_DIFF out  o
+NET DAC_CS[0]
+    inst26   dc_24          out  eq0
+NET DAC_CS[1]
+    inst26   dc_24          out  eq1
+NET DAC_CS[2]
+    inst26   dc_24          out  eq2
+NET DAC_CS[3..0]
+    PIN  output DAC_CS[3..0]
+NET DAC_CS[3]
+    inst26   dc_24          out  eq3
+NET DAC_DATA
+    PIN  output DAC_DATA
+    inst82   WIRE           out  OUT
+NET DD[0]
+    inst101  WIRE           inp  IN
+NET DD[13..0]
+    PIN  output DD[13..0]
+    inst14   DAC_RAM        out  q[13..0]
+NET EMPTY0
+    inst3    ADC_RAM        out  empty
+NET EMPTY1
+    inst66   ADC_RAM        out  empty
+NET EMPTY2
+    inst67   ADC_RAM        out  empty
+NET EMPTY3
+    inst68   ADC_RAM        out  empty
+NET FULL0
+    inst3    ADC_RAM        out  full
+    inst57   DFF            inp  CLK
+    inst87   WIRE           inp  IN
+NET FULL1
+    inst66   ADC_RAM        out  full
+    inst72   DFF            inp  CLK
+NET FULL2
+    inst67   ADC_RAM        out  full
+    inst73   DFF            inp  CLK
+NET FULL3
+    inst68   ADC_RAM        out  full
+    inst74   DFF            inp  CLK
+NET MISO
+    inst45   WIRE           inp  IN
+    inst49   WIRE           inp  IN
+    inst98   74165_a        out  QH
+NET MOSI
+    inst     lpm_shiftreg16 inp  shiftin
+    inst83   WIRE           out  OUT
+NET MX_CTRL[2..0]
+    inst24   mux16_8        inp  sel[2..0]
+    inst88   mx_ctrl        out  mux_ctrl[2..0]
+NET O_DAT[15..0]
+    inst24   mux16_8        out  result[15..0]
+NET O_DAT[15..8]
+    inst98   74165_a        inp  D[7..0]
+NET O_DAT[7..0]
+    inst97   74165_a        inp  D[7..0]
+NET PA4
+    PIN  input  PA4
+    155      NOT            inp  IN
+    inst92   imp_former1    inp  in_sgn
+NET PA5
+    PIN  input  PA5
+    inst84   WIRE           inp  IN
+NET PB2
+    PIN  output PB2
+    inst87   WIRE           out  OUT
+NET PB4
+    PIN  output PB4
+    inst49   WIRE           out  OUT
+NET PB5
+    PIN  input  PB5
+    inst83   WIRE           inp  IN
+NET PD[10..0]
+    PIN  input  PD[10..0]
+NET PD[3..0]
+    inst62   WIRE           inp  IN
+NET PD[7..4]
+    inst63   WIRE           inp  IN
+NET PD[8]
+    inst79   WIRE           inp  IN
+NET PD[9]
+    inst80   WIRE           inp  IN
+NET PE2
+    PIN  input  PE2
+    inst65   WIRE           inp  IN
+NET PE6
+    PIN  input  PE6
+    inst82   WIRE           inp  IN
+NET Read_DAC
+    inst111  WIRE           inp  IN
+    inst20   AND2           out  OUT
+    inst5    mux21          inp  data0
+NET SCK
+    159      NOT            inp  IN
+    inst     lpm_shiftreg16 inp  clock
+    inst108  WIRE           inp  IN
+    inst84   WIRE           out  OUT
+NET SCK_I
+    159      NOT            out  OUT
+    inst97   74165_a        inp  CLK
+    inst98   74165_a        inp  CLK
+NET SS
+    155      NOT            out  OUT
+    inst     lpm_shiftreg16 inp  enable
+    inst109  WIRE           inp  IN
+    inst96   imp_former1    inp  in_sgn
+    inst97   74165_a        inp  ENA
+    inst98   74165_a        inp  ENA
+NET STLD
+    inst90   OR2            out  OUT
+    inst97   74165_a        inp  STLD
+    inst98   74165_a        inp  STLD
+NET TEST0
+    PIN  output TEST0
+    inst10   WIRE           out  OUT
+NET TEST1
+    PIN  output TEST1
+    inst35   WIRE           out  OUT
+NET TEST10
+    PIN  output TEST10
+    inst106  WIRE           out  OUT
+NET TEST11
+    PIN  output TEST11
+    inst107  WIRE           out  OUT
+NET TEST12
+    PIN  output TEST12
+    inst108  WIRE           out  OUT
+NET TEST13
+    PIN  output TEST13
+    inst109  WIRE           out  OUT
+NET TEST14
+    PIN  output TEST14
+    inst111  WIRE           out  OUT
+NET TEST15
+    PIN  output TEST15
+    inst112  WIRE           out  OUT
+NET TEST2
+    PIN  output TEST2
+    inst44   WIRE           out  OUT
+NET TEST3
+    PIN  output TEST3
+    inst45   WIRE           out  OUT
+NET TEST4
+    PIN  output TEST4
+    inst100  WIRE           out  OUT
+NET TEST5
+    PIN  output TEST5
+    inst101  WIRE           out  OUT
+NET TEST6
+    PIN  output TEST6
+    inst102  WIRE           out  OUT
+NET TEST7
+    PIN  output TEST7
+    inst103  WIRE           out  OUT
+NET TEST8
+    PIN  output TEST8
+    inst104  WIRE           out  OUT
+NET TEST9
+    PIN  output TEST9
+    inst105  WIRE           out  OUT
+NET Write_DAC
+    inst112  WIRE           inp  IN
+    inst16   AND2           out  OUT
+    inst18   OR2            inp  IN1
+NET a_en
+    inst34   OR2            inp  IN2
+    inst55   DFF            out  Q
+NET ad_clk0
+    inst126  mux21          out  result
+    inst29   AND2           inp  IN1
+NET ad_clk1
+    inst127  mux21          out  result
+    inst69   AND2           inp  IN2
+NET ad_clk2
+    inst128  mux21          out  result
+    inst70   AND2           inp  IN2
+NET ad_clk3
+    inst129  mux21          out  result
+    inst71   AND2           inp  IN2
+NET adc_clk0
+    inst3    ADC_RAM        inp  clock
+    inst30   mux21          out  result
+NET adc_clk1
+    inst66   ADC_RAM        inp  clock
+    inst77   mux21          out  result
+NET adc_clk2
+    inst67   ADC_RAM        inp  clock
+    inst76   mux21          out  result
+NET adc_clk3
+    inst68   ADC_RAM        inp  clock
+    inst75   mux21          out  result
+NET adc_start
+    152      NOT            inp  IN
+    inst107  WIRE           inp  IN
+    inst93   imp_former1    out  out_imp
+NET addr[0]
+    inst10   WIRE           inp  IN
+NET addr[13..0]
+    inst14   DAC_RAM        inp  address[13..0]
+    inst15   compar_addr    inp  dataa[13..0]
+    inst17   count_dac      out  q[13..0]
+NET addr_en
+    inst104  WIRE           inp  IN
+    inst17   count_dac      inp  clk_en
+    inst34   OR2            out  OUT
+NET adr_clr
+    inst145  NOR3           inp  IN3
+    inst32   OR2            inp  IN1
+    inst37   AND2           out  OUT
+    inst40   t_count        inp  aclr
+NET adr_en
+    inst145  NOR3           out  OUT
+    inst55   DFF            inp  PRN
+NET c2
+    inst139  WIRE           out  OUT
+NET c3
+    inst140  WIRE           out  OUT
+NET c3,c2
+    inst137  mux4_1         inp  sel[1..0]
+    inst138  mux4_1         inp  sel[1..0]
+NET ccc
+    inst106  WIRE           inp  IN
+    inst17   count_dac      inp  clock
+    inst18   OR2            out  OUT
+NET clk
+    inst114  hex_ff         inp  clock
+    inst12   GLOBAL         out  OUT
+    inst143  hex_ff         inp  clock
+    inst22   hex_ff         inp  clock
+    inst33   hex_ff         inp  clock
+    inst43   NAND2          inp  IN1
+NET clk1_en
+    inst117  count256       inp  clk_en
+    inst120  DFF            out  Q
+NET clk50
+    inst38   AND2           inp  IN1
+    inst40   t_count        inp  clock
+    inst78   mux4_1         out  result
+NET clk64
+    inst118  DFF            inp  CLK
+    inst119  imp_former1    inp  clk
+    inst12   GLOBAL         inp  IN
+    inst123  DFF            inp  CLK
+    inst124  imp_former1    inp  clk
+    inst135  imp_former1    inp  clk
+    inst136  imp_former1    inp  clk
+    inst141  hex_ff         inp  clock
+    inst23   mux21          inp  data1
+    inst39   NAND2          inp  IN1
+    inst4    pll_16_100     out  c0
+    inst5    mux21          inp  data1
+    inst59   DFF            inp  CLK
+    inst6    lpm_counter0   inp  clock
+    inst78   mux4_1         inp  data0
+    inst92   imp_former1    inp  clk
+    inst96   imp_former1    inp  clk
+NET clk_a0
+    inst103  WIRE           inp  IN
+    inst29   AND2           out  OUT
+    inst30   mux21          inp  data0
+NET clk_a1
+    inst69   AND2           out  OUT
+    inst77   mux21          inp  data0
+NET clk_a2
+    inst70   AND2           out  OUT
+    inst76   mux21          inp  data0
+NET clk_in
+    inst14   DAC_RAM        inp  inclock
+    inst23   mux21          out  result
+NET clko[0]
+    inst110  imp_former1    inp  clk
+    inst113  DFF            inp  CLK
+    inst142  DFF            inp  CLK
+    inst52   DFF            inp  CLK
+    inst53   DFF            inp  CLK
+    inst54   DFF            inp  CLK
+    inst56   DFF            inp  CLK
+    inst58   DFF            inp  CLK
+    inst61   DFF            inp  CLK
+    inst64   DFF            inp  CLK
+    inst78   mux4_1         inp  data1
+    inst81   DFF            inp  CLK
+    inst85   DFF            inp  CLK
+    inst86   DFF            inp  CLK
+    inst89   DFF            inp  CLK
+    inst91   imp_former1    inp  clk
+    inst93   imp_former1    inp  clk
+    inst94   imp_former1    inp  clk
+    inst95   imp_former1    inp  clk
+NET clko[1]
+    inst78   mux4_1         inp  data2
+NET clko[2]
+    inst78   mux4_1         inp  data3
+NET clko[7..0]
+    inst6    lpm_counter0   out  q[7..0]
+NET clr_dac
+    inst102  WIRE           inp  IN
+    inst17   count_dac      inp  aclr
+    inst32   OR2            out  OUT
+NET cmd1
+    inst11   OR6            inp  IN1
+    inst14   DAC_RAM        inp  wren
+    inst145  NOR3           inp  IN1
+    inst16   AND2           inp  IN1
+    inst27   OR3            inp  IN1
+    inst28   OR2            inp  IN1
+    inst52   DFF            out  Q
+NET cmd10
+    inst56   DFF            out  Q
+NET cmd11
+    inst11   OR6            inp  IN4
+    inst51   AND2           inp  IN1
+    inst81   DFF            out  Q
+NET cmd12
+    inst11   OR6            inp  IN5
+    inst113  DFF            out  Q
+    inst115  AND2           inp  IN1
+NET cmd13
+    inst145  NOR3           inp  IN2
+    inst20   AND2           inp  IN1
+    inst27   OR3            inp  IN2
+    inst28   OR2            inp  IN2
+    inst89   DFF            out  Q
+NET cmd14
+    inst11   OR6            inp  IN2
+    inst31   AND2           inp  IN1
+    inst61   DFF            out  Q
+NET cmd15
+    153      NOT            inp  IN
+    inst3    ADC_RAM        inp  aclr
+    inst53   DFF            out  Q
+    inst66   ADC_RAM        inp  aclr
+    inst67   ADC_RAM        inp  aclr
+    inst68   ADC_RAM        inp  aclr
+NET cmd15_i
+    153      NOT            out  OUT
+    inst57   DFF            inp  CLRN
+    inst72   DFF            inp  CLRN
+    inst73   DFF            inp  CLRN
+    inst74   DFF            inp  CLRN
+NET cmd2
+    inst23   mux21          inp  sel
+    inst27   OR3            inp  IN3
+    inst5    mux21          inp  sel
+    inst54   DFF            out  Q
+    inst93   imp_former1    inp  in_sgn
+NET cmd3
+    inst3    ADC_RAM        inp  rdreq
+    inst30   mux21          inp  sel
+    inst58   DFF            out  Q
+    inst66   ADC_RAM        inp  rdreq
+    inst67   ADC_RAM        inp  rdreq
+    inst68   ADC_RAM        inp  rdreq
+    inst75   mux21          inp  sel
+    inst76   mux21          inp  sel
+    inst77   mux21          inp  sel
+NET cmd5
+    inst64   DFF            out  Q
+NET cmd6
+    inst85   DFF            out  Q
+    inst94   imp_former1    inp  in_sgn
+NET cmd7
+    inst86   DFF            out  Q
+    inst95   imp_former1    inp  in_sgn
+NET cmd9
+    inst11   OR6            inp  IN3
+    inst142  DFF            out  Q
+    inst144  AND2           inp  IN1
+NET cmd[3..0]
+    inst25   dc16           inp  data[3..0]
+    inst62   WIRE           out  OUT
+    inst88   mx_ctrl        inp  cmd[3..0]
+NET cmd_d
+    inst28   OR2            out  OUT
+    inst43   NAND2          inp  IN2
+NET cmd_dac
+    inst27   OR3            out  OUT
+    inst91   imp_former1    inp  in_sgn
+NET cmd_w
+    161      NOT            inp  IN
+    inst11   OR6            out  OUT
+    inst41   AND2           inp  IN2
+NET cmp[13..0]
+    inst15   compar_addr    inp  datab[13..0]
+NET cmp[15..0]
+    inst22   hex_ff         out  q[15..0]
+    inst24   mux16_8        inp  data2x[15..0]
+NET cmp_h1
+    inst121  NOR2           inp  IN2
+    inst135  imp_former1    out  out_imp
+NET cmp_l1
+    inst121  NOR2           inp  IN1
+    inst136  imp_former1    out  out_imp
+NET cmp_lh1
+    inst120  DFF            inp  PRN
+    inst121  NOR2           out  OUT
+    inst131  DFF            inp  PRN
+NET cmpr[13..0]
+    inst132  adc_cmp_h      inp  datab[13..0]
+NET cmpr[15..0]
+    inst114  hex_ff         out  q[15..0]
+    inst24   mux16_8        inp  data5x[15..0]
+NET cnst[7..0]
+    inst13   constA5        out  result[7..0]
+NET cnst[7..0],gn,freq[1..0],d_run,FULL3,FULL2,FULL1,FULL0
+    inst24   mux16_8        inp  data6x[15..0]
+NET cnt1[7..0]
+    inst116  cmp8           inp  dataa[7..0]
+    inst117  count256       out  q[7..0]
+NET control[1..0]
+    inst26   dc_24          inp  data[1..0]
+    inst36   dc_24          inp  data[1..0]
+    inst50   mux13_4        inp  sel[1..0]
+NET control[3..0]
+    inst63   WIRE           out  OUT
+NET d_run
+    158      NOT            inp  IN
+    inst100  WIRE           inp  IN
+    inst34   OR2            inp  IN1
+    inst60   DFF            out  Q
+NET dac_run
+    157      NOT            out  OUT
+    inst60   DFF            inp  PRN
+NET dac_stop
+    156      NOT            out  OUT
+    inst60   DFF            inp  CLRN
+NET delay[15..0]
+    inst24   mux16_8        inp  data4x[15..0]
+    inst33   hex_ff         out  q[15..0]
+NET delay[15..8]
+    inst122  cmp8           inp  datab[7..0]
+NET delay[7..0]
+    inst116  cmp8           inp  datab[7..0]
+NET dsp_d[13..0]
+    inst14   DAC_RAM        inp  data[13..0]
+NET dsp_d[15..0]
+    inst     lpm_shiftreg16 out  q[15..0]
+    inst114  hex_ff         inp  data[15..0]
+    inst143  hex_ff         inp  data[15..0]
+    inst22   hex_ff         inp  data[15..0]
+    inst33   hex_ff         inp  data[15..0]
+NET freq[0]
+    inst79   WIRE           out  OUT
+NET freq[1..0]
+    inst78   mux4_1         inp  sel[1..0]
+NET freq[1]
+    inst80   WIRE           out  OUT
+NET gn
+    inst1    GND            out  1
+    inst11   OR6            inp  IN6
+    inst120  DFF            inp  CLK
+    inst120  DFF            inp  D
+    inst131  DFF            inp  CLK
+    inst131  DFF            inp  D
+    inst55   DFF            inp  D
+    inst57   DFF            inp  D
+    inst60   DFF            inp  D
+    inst72   DFF            inp  D
+    inst73   DFF            inp  D
+    inst74   DFF            inp  D
+    inst9    WIRE           inp  IN
+    inst97   74165_a        inp  SER
+NET gn,gn,ADC[13..0]
+    inst24   mux16_8        inp  data3x[15..0]
+NET gn,gn,DD[13..0]
+    inst141  hex_ff         inp  data[15..0]
+    inst24   mux16_8        inp  data1x[15..0]
+NET h1
+    inst132  adc_cmp_h      out  ageb
+    inst133  cnt8           inp  clock
+    inst137  mux4_1         inp  data0
+NET hi[1]
+    inst137  mux4_1         inp  data1
+NET hi[3]
+    inst137  mux4_1         inp  data2
+NET hi[5]
+    inst137  mux4_1         inp  data3
+NET hi[7..0]
+    inst133  cnt8           out  q[7..0]
+NET l1
+    inst132  adc_cmp_h      out  aleb
+    inst134  cnt8           inp  clock
+    inst138  mux4_1         inp  data0
+NET lo[1]
+    inst138  mux4_1         inp  data1
+NET lo[3]
+    inst138  mux4_1         inp  data2
+NET lo[5]
+    inst138  mux4_1         inp  data3
+NET lo[7..0]
+    inst134  cnt8           out  q[7..0]
+NET mode[0]
+    inst139  WIRE           inp  IN
+NET mode[15..0]
+    inst143  hex_ff         out  q[15..0]
+    inst24   mux16_8        inp  data0x[15..0]
+NET mode[1]
+    inst140  WIRE           inp  IN
+NET mode[7]
+    inst105  WIRE           inp  IN
+    inst126  mux21          inp  sel
+    inst127  mux21          inp  sel
+    inst128  mux21          inp  sel
+    inst129  mux21          inp  sel
+NET out_ad1
+    inst125  OR2            out  OUT
+    inst126  mux21          inp  data0
+    inst127  mux21          inp  data0
+    inst128  mux21          inp  data0
+    inst129  mux21          inp  data0
+NET out_addr
+    inst110  imp_former1    out  out_imp
+    inst32   OR2            inp  IN2
+    inst55   DFF            inp  CLK
+NET q1
+    inst25   dc16           out  eq1
+    inst52   DFF            inp  D
+NET q10
+    inst25   dc16           out  eq10
+    inst56   DFF            inp  D
+NET q11
+    inst25   dc16           out  eq11
+    inst81   DFF            inp  D
+NET q12
+    inst113  DFF            inp  D
+    inst25   dc16           out  eq12
+NET q13
+    inst25   dc16           out  eq13
+    inst89   DFF            inp  D
+NET q14
+    inst25   dc16           out  eq14
+    inst61   DFF            inp  D
+NET q2
+    inst25   dc16           out  eq2
+    inst54   DFF            inp  D
+NET q3
+    inst25   dc16           out  eq3
+    inst58   DFF            inp  D
+NET q4
+    inst25   dc16           out  eq4
+NET q5
+    inst25   dc16           out  eq5
+    inst64   DFF            inp  D
+NET q6
+    inst25   dc16           out  eq6
+    inst85   DFF            inp  D
+NET q7
+    inst25   dc16           out  eq7
+    inst86   DFF            inp  D
+NET q8
+    inst25   dc16           out  eq8
+NET q9
+    inst142  DFF            inp  D
+    inst25   dc16           out  eq9
+NET r11
+    162      NOT            inp  IN
+    inst117  count256       inp  aclr
+    inst119  imp_former1    out  out_imp
+    inst125  OR2            inp  IN1
+NET r12
+    163      NOT            inp  IN
+    inst124  imp_former1    out  out_imp
+    inst125  OR2            inp  IN2
+    inst130  count256       inp  aclr
+NET read_d
+    151      NOT            out  OUT
+    inst20   AND2           inp  IN2
+NET read_d0
+    inst30   mux21          inp  data1
+    inst36   dc_24          out  eq0
+NET read_d1
+    inst36   dc_24          out  eq1
+    inst77   mux21          inp  data1
+NET read_d2
+    inst36   dc_24          out  eq2
+    inst76   mux21          inp  data1
+NET read_d3
+    inst36   dc_24          out  eq3
+    inst75   mux21          inp  data1
+NET read_dd
+    151      NOT            inp  IN
+    inst35   WIRE           inp  IN
+    inst36   dc_24          inp  enable
+    inst42   AND2           out  OUT
+    inst90   OR2            inp  IN2
+NET rzh1
+    inst135  imp_former1    inp  in_sgn
+    inst137  mux4_1         out  result
+NET rzl1
+    inst136  imp_former1    inp  in_sgn
+    inst138  mux4_1         out  result
+NET s1
+    inst97   74165_a        out  QH
+    inst98   74165_a        inp  SER
+NET s_load
+    inst41   AND2           inp  IN1
+    inst92   imp_former1    out  out_imp
+NET s_read
+    inst42   AND2           inp  IN2
+    inst96   imp_former1    out  out_imp
+NET start
+    152      NOT            out  OUT
+    inst57   DFF            inp  PRN
+    inst72   DFF            inp  PRN
+    inst73   DFF            inp  PRN
+    inst74   DFF            inp  PRN
+NET t_clk[3..0]
+    inst40   t_count        out  q[3..0]
+NET usedw0[13..0]
+    inst3    ADC_RAM        out  usedw[13..0]
+NET uuy
+    inst9    WIRE           out  OUT
+NET v0
+    inst29   AND2           inp  IN2
+    inst3    ADC_RAM        inp  wrreq
+    inst57   DFF            out  Q
+NET v1
+    inst66   ADC_RAM        inp  wrreq
+    inst69   AND2           inp  IN1
+    inst72   DFF            out  Q
+NET v2
+    inst67   ADC_RAM        inp  wrreq
+    inst70   AND2           inp  IN1
+    inst73   DFF            out  Q
+NET v3
+    inst68   ADC_RAM        inp  wrreq
+    inst71   AND2           inp  IN1
+    inst74   DFF            out  Q
+NET vc
+    inst113  DFF            inp  CLRN
+    inst113  DFF            inp  PRN
+    inst118  DFF            inp  CLRN
+    inst118  DFF            inp  PRN
+    inst123  DFF            inp  CLRN
+    inst123  DFF            inp  PRN
+    inst141  hex_ff         inp  enable
+    inst142  DFF            inp  CLRN
+    inst142  DFF            inp  PRN
+    inst2    VCC            out  1
+    inst26   dc_24          inp  enable
+    inst38   AND2           inp  IN2
+    inst39   NAND2          inp  IN2
+    inst52   DFF            inp  CLRN
+    inst52   DFF            inp  PRN
+    inst53   DFF            inp  CLRN
+    inst53   DFF            inp  PRN
+    inst54   DFF            inp  CLRN
+    inst54   DFF            inp  PRN
+    inst55   DFF            inp  CLRN
+    inst56   DFF            inp  CLRN
+    inst56   DFF            inp  PRN
+    inst58   DFF            inp  CLRN
+    inst58   DFF            inp  PRN
+    inst59   DFF            inp  CLRN
+    inst59   DFF            inp  PRN
+    inst61   DFF            inp  CLRN
+    inst61   DFF            inp  PRN
+    inst64   DFF            inp  CLRN
+    inst64   DFF            inp  PRN
+    inst81   DFF            inp  CLRN
+    inst81   DFF            inp  PRN
+    inst85   DFF            inp  CLRN
+    inst85   DFF            inp  PRN
+    inst86   DFF            inp  CLRN
+    inst86   DFF            inp  PRN
+    inst89   DFF            inp  CLRN
+    inst89   DFF            inp  PRN
+    inst99   WIRE           inp  IN
+NET wr11
+    inst33   hex_ff         inp  enable
+    inst51   AND2           out  OUT
+NET wr12
+    inst114  hex_ff         inp  enable
+    inst115  AND2           out  OUT
+NET wr14
+    inst22   hex_ff         inp  enable
+    inst31   AND2           out  OUT
+NET wr9
+    inst143  hex_ff         inp  enable
+    inst144  AND2           out  OUT
+NET write_d
+    160      NOT            inp  IN
+    inst115  AND2           inp  IN2
+    inst144  AND2           inp  IN2
+    inst31   AND2           inp  IN2
+    inst41   AND2           out  OUT
+    inst44   WIRE           inp  IN
+    inst51   AND2           inp  IN2
+    inst90   OR2            inp  IN1
+NET write_di
+    160      NOT            out  OUT
+    inst16   AND2           inp  IN2

@@ -1,0 +1,27 @@
+% mx_ctrl -- readback selector: command code -> mux16_8 select (mux_ctrl[2..0]).
+  Extended (deviation from BDF) so the STM can READ the write/read registers
+  cmd11 (delays), cmd12 (threshold) and cmd14 (reset-addr) -- the FW reads these
+  via their WRITE command code (Altera_ReadDelayRegister/ComparatorThreshold/
+  ResetAddress). mux input mapping:
+    000=mode 001=DAC 010=reset-addr(cmp) 011=ADC 100=delays
+    101=sample-count 110=status 111=threshold(cmpr, data7x) %
+SUBDESIGN mx_ctrl
+(
+	cmd[3..0]			: INPUT;
+	mux_ctrl[2..0]		: OUTPUT;
+)
+BEGIN
+CASE cmd[] IS
+	WHEN 0  => mux_ctrl[2..0] = B"000";	-- read working-mode register
+	WHEN 13 => mux_ctrl[2..0] = B"001";	-- read DAC RAM
+	WHEN 5  => mux_ctrl[2..0] = B"010";	-- read reset-address (cmp)
+	WHEN 14 => mux_ctrl[2..0] = B"010";	-- read reset-address via cmd14 (= cmd5)
+	WHEN 3  => mux_ctrl[2..0] = B"011";	-- read ADC RAM
+	WHEN 8  => mux_ctrl[2..0] = B"100";	-- read delays
+	WHEN 11 => mux_ctrl[2..0] = B"100";	-- read delays via cmd11 (= cmd8)
+	WHEN 10 => mux_ctrl[2..0] = B"101";	-- read/write sample-count (nsamp)
+	WHEN 4  => mux_ctrl[2..0] = B"110";	-- read status word
+	WHEN 12 => mux_ctrl[2..0] = B"111";	-- read comparator threshold (data7x)
+	WHEN OTHERS => mux_ctrl[2..0] = B"000";
+END CASE;
+END;

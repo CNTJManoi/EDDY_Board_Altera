@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.878 ns
+From           : cbe[0]
+To             : hex_ff:inst43|lpm_ff:lpm_ff_component|dffs[0]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 22.326 ns
+From           : ADC_RAM:inst3|scfifo:scfifo_component|scfifo_s741:auto_generated|a_dpfifo_7e41:dpfifo|dpram_c711:FIFOram|altsyncram_75k1:altsyncram1|ram_block2a17~portb_address_reg0
+To             : ad[3]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 17.964 ns
+From           : cbe[0]
+To             : ad[0]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.940 ns
+From           : AAD[9]
+To             : ADC_RAM:inst3|scfifo:scfifo_component|scfifo_s741:auto_generated|a_dpfifo_7e41:dpfifo|dpram_c711:FIFOram|altsyncram_75k1:altsyncram1|ram_block2a9~porta_datain_reg0
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pll_16_100:inst4|altpll:altpll_component|pll_16_100_altpll:auto_generated|wire_pll1_clk[0]'
+Slack          : -0.587 ns
+Required Time  : 100.00 MHz ( period = 10.000 ns )
+Actual Time    : 94.46 MHz ( period = 10.587 ns )
+From           : ADC_RAM:inst3|scfifo:scfifo_component|scfifo_s741:auto_generated|a_dpfifo_7e41:dpfifo|dpram_c711:FIFOram|altsyncram_75k1:altsyncram1|ram_block2a19~portb_address_reg0
+To             : DAC_RAM:inst14|altsyncram:altsyncram_component|altsyncram_gtd1:auto_generated|ram_block1a5~porta_datain_reg0
+From Clock     : pll_16_100:inst4|altpll:altpll_component|pll_16_100_altpll:auto_generated|wire_pll1_clk[0]
+To Clock       : pll_16_100:inst4|altpll:altpll_component|pll_16_100_altpll:auto_generated|wire_pll1_clk[0]
+Failed Paths   : 12
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 70.30 MHz ( period = 14.224 ns )
+From           : ADC_RAM:inst3|scfifo:scfifo_component|scfifo_s741:auto_generated|a_dpfifo_7e41:dpfifo|dpram_c711:FIFOram|altsyncram_75k1:altsyncram1|ram_block2a14~portb_address_reg0
+To             : hex_ff:inst43|lpm_ff:lpm_ff_component|dffs[0]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'DCO'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 202.80 MHz ( period = 4.931 ns )
+From           : inst57
+To             : ADC_RAM:inst3|scfifo:scfifo_component|scfifo_s741:auto_generated|a_dpfifo_7e41:dpfifo|a_fefifo_mcf:fifo_state|b_full
+From Clock     : DCO
+To Clock       : DCO
+Failed Paths   : 0
+
+Type           : Clock Hold: 'pll_16_100:inst4|altpll:altpll_component|pll_16_100_altpll:auto_generated|wire_pll1_clk[0]'
+Slack          : 0.646 ns
+Required Time  : 100.00 MHz ( period = 10.000 ns )
+Actual Time    : N/A
+From           : spi_master:inst19|tx_buffer[0]
+To             : spi_master:inst19|tx_buffer[0]
+From Clock     : pll_16_100:inst4|altpll:altpll_component|pll_16_100_altpll:auto_generated|wire_pll1_clk[0]
+To Clock       : pll_16_100:inst4|altpll:altpll_component|pll_16_100_altpll:auto_generated|wire_pll1_clk[0]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : hex_ff:inst43|lpm_ff:lpm_ff_component|dffs[14]
+To             : count_ots:inst11|lpm_counter:lpm_counter_component|cntr_92k:auto_generated|mux2129_dataout~12
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 16
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 28
+
+--------------------------------------------------------------------------------------
+

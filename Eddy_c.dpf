@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="ADC0_CLKN" direction="Output" source="Hierarchy Database" diff_pair_node="ADC0_CLKP" >
+		</pin>
+		<pin name="ADC0_CLKP" direction="Output" source="Hierarchy Database" diff_pair_node="ADC0_CLKN" >
+		</pin>
+		<pin name="ADC1_CLKN" direction="Output" source="Hierarchy Database" diff_pair_node="ADC1_CLKP" >
+		</pin>
+		<pin name="ADC1_CLKP" direction="Output" source="Hierarchy Database" diff_pair_node="ADC1_CLKN" >
+		</pin>
+		<pin name="ADC2_CLKN" direction="Output" source="Hierarchy Database" diff_pair_node="ADC2_CLKP" >
+		</pin>
+		<pin name="ADC2_CLKP" direction="Output" source="Hierarchy Database" diff_pair_node="ADC2_CLKN" >
+		</pin>
+		<pin name="ADC3_CLKN" direction="Output" source="Hierarchy Database" diff_pair_node="ADC3_CLKP" >
+		</pin>
+		<pin name="ADC3_CLKP" direction="Output" source="Hierarchy Database" diff_pair_node="ADC3_CLKN" >
+		</pin>
+		<pin name="DAC_CLKN" direction="Output" source="Hierarchy Database" diff_pair_node="DAC_CLKP" >
+		</pin>
+		<pin name="DAC_CLKP" direction="Output" source="Hierarchy Database" diff_pair_node="DAC_CLKN" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

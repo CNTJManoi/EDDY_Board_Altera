@@ -1,0 +1,290 @@
+
+INCLUDE "addr_dec.inc";
+--INCLUDE "FTS_BUS.inc";
+SUBDESIGN pci_rail
+(
+	-- сигналы шины PCI (46 pins)
+	clk, /rst :	INPUT;
+	cbe[3..0] :	INPUT;
+	ad[31..0] :	BIDIR;
+	/frame :	INPUT;
+	/irdy :		INPUT;
+	idsel :		INPUT;
+	/devsel :	BIDIR;
+	/trdy :		BIDIR;
+	/stop :		BIDIR;
+	/inta :		BIDIR;
+	par :		BIDIR;
+-- отладочный сигнал
+--	debu	:	OUTPUT;
+-- сигналы TMS320C549
+	status[4..0]	:	INPUT;
+	dsp_rs :			OUTPUT;
+	dsp_xf :			INPUT;
+	dsp_d[31..0]:		BIDIR;
+	control[15..0] 	:	OUTPUT;
+	cmd[7..0]	:		OUTPUT;
+	write_d		:		OUTPUT;
+	read_d		:		OUTPUT;
+)
+
+VARIABLE
+	cur_st :	MACHINE WITH STATES ( ST_IDLE, ST_CMP_ADDR, ST_B_BUSY,
+					ST_S_DATA, ST_BACKOFF, ST_TURN_AR );
+
+	adi[7..0] :		DFFE; -- адресный регистр
+
+	% декодированная команда - признаки "обращение к портам",
+	  "операция записи", "обращение к конфиг. регистрам" %
+	c_wr, c_io, c_cfg :	DFFE;
+
+	% дешифр. адреса и команды выполняем за два такта - иначе не успеть %
+	c_cfg_p :		DFFE;
+	is_io, is_cfg :		NODE;
+
+	ioen_rg :		DFFE;	% разрешение i/o %
+
+	irq_line[7..0] :	DFFE;	% вектор прерываний %
+	base_addr[10..0] :	DFFE;	% адрес порта %
+	bar_sel :		NODE;--  выбор регистра базового адреса при конфигурационной записи
+
+	out_data[31..0] :	TRI; -- шина адреса-данных
+	res_data[31..0] :	NODE; -- данные для чтения из устройства
+
+	d_devsel, d_trdy, d_stop :	NODE;
+	r_trdy :		DFF;
+	r_stop, r_devs :	JKFF;
+	reply_oe :		JKFF;
+	r_outd :		JKFF;
+
+	next_turn_ar :	NODE;
+	do_store :	NODE;
+	cfg_wr :	NODE;
+
+	cmd_rg[7..0] :	DFFE;
+	control_rg[7..0] :	DFFE;
+	control_r[7..0] :	DFFE;
+	xf_rg :		JKFF;
+	d_dat[31..0] :		TRI;
+	intrpt_mask	:	DFFE;
+	ident_intrpt[7..0]	:	DFFE;
+--	t_count1	:	t_count;
+--	count_in1	:	count_in;
+
+BEGIN
+	cur_st.reset = !/rst;
+	cur_st.clk   = clk;
+
+	% проверка, не наш ли адрес порта выставлен? %
+	is_io = addr_dec( clk, do_store, cbe[], ad[], base_addr[].q ) & ioen_rg.q;
+
+	c_io.(clk, clrn, ena) = (clk, /rst, cur_st == ST_CMP_ADDR);
+	c_io.d = is_io;
+
+	% запомнить адрес %
+	do_store = (cur_st == ST_IDLE  #  cur_st == ST_TURN_AR)  &  !/frame;
+
+	adi[].clk  = clk;
+	adi[].ena  = do_store;
+	adi[].d    = ad[7..0]; --адрес
+
+	% декодировать команду %
+	c_cfg_p.(clk, clrn, ena) = (clk, /rst, do_store);
+	c_cfg_p.d = (cbe[3..1] == B"101")	% conf. space read or write %
+			& idsel;
+
+	is_cfg = c_cfg_p.q & !adi0 & !adi1;
+
+	c_cfg.(clk, clrn, ena) = (clk, /rst, cur_st == ST_CMP_ADDR);
+	c_cfg.d = is_cfg;
+
+	c_wr.(clk, clrn, ena) = (clk, /rst, do_store);
+	c_wr.d = cbe[0];			% '1' when write cmd %
+
+	r_trdy.(clk, clrn) = (clk, /rst);
+	
+	IF cur_st == ST_S_DATA THEN
+		r_trdy.d = !r_trdy.q;
+		r_stop.j = !r_trdy.q & !/frame;
+	ELSE
+		r_trdy.d = GND;
+		r_stop.j = GND;
+	END IF;	
+				
+	CASE cur_st IS
+	WHEN ST_S_DATA =>	next_turn_ar = d_trdy  &  !/irdy  &  /frame;
+	WHEN ST_BACKOFF =>      next_turn_ar = /frame;
+	WHEN OTHERS =>          next_turn_ar = GND;
+	END CASE;
+
+	r_stop.(clk, clrn) = (clk, /rst);
+	r_stop.k = next_turn_ar;
+
+	r_devs.(clk, clrn) = (clk, /rst);
+	r_devs.j = (cur_st == ST_CMP_ADDR)  &  (is_io # is_cfg);
+	r_devs.k = next_turn_ar;
+
+	d_trdy   = r_trdy.q;
+	d_stop   = r_stop.q;
+	d_devsel = r_devs.q;
+
+	reply_oe.clk  = clk;
+	reply_oe.clrn = /rst;
+	reply_oe.j    = (cur_st == ST_CMP_ADDR)  &  (is_io # is_cfg);
+	reply_oe.k    = (cur_st == ST_TURN_AR);
+
+	/trdy   = TRI( !d_trdy,   reply_oe.q );
+	/stop   = TRI( !d_stop,   reply_oe.q );
+	/devsel = TRI( !d_devsel, reply_oe.q );
+
+	IF c_io.q THEN
+		IF !adi4 THEN
+			res_data[31..0]  = d_dat[31..0].out;
+		ELSE
+			res_data[7..0]	 = control_rg[7..0].q;
+			res_data[15..8]  = control_r[7..0].q;
+			res_data[31..24] = ident_intrpt[7..0].q;
+			res_data[23..20] = X"E"; -- 23.10.2014	тип платы
+			res_data[19..16] = status[3..0];
+		END IF;
+	ELSIF c_cfg.q THEN
+		CASE adi[7..2].q IS
+		WHEN 0 =>	res_data[] = X"12377678";	-- vendor & dev
+		WHEN 1 =>					-- cmd & status
+			res_data[] = (B"0000001010000000000000100000000", ioen_rg.q);--back-to-bacr-enable 07.02.2015
+		WHEN 2 =>	res_data[] = X"07700000";	-- class & rev
+		WHEN 4 =>					-- i/o base addr
+			res_data[] = (X"0000", base_addr[].q, B"00001");
+		WHEN 15 =>					-- i/o base addr
+			res_data[] = (X"000001", irq_line[].q);
+		WHEN OTHERS =>	res_data[] = 0;
+		END CASE;
+	ELSE
+		res_data[31..0] = 0;
+	END IF;
+
+	% обработка команды конфигурационной записи %
+	cfg_wr  = (d_trdy  &  c_cfg.q  &  c_wr.q);
+	bar_sel = (cfg_wr  &  adi[7..2] == 4);
+
+	base_addr[].clk  = clk;
+	base_addr[].clrn = /rst;
+	base_addr[].d    = ad[15..5];
+	base_addr[2..0].ena  = bar_sel & !cbe0;
+	base_addr[10..3].ena = bar_sel & !cbe1;
+
+	irq_line[].clk  = clk;
+	irq_line[].clrn = /rst;
+	irq_line[].d    = ad[7..0];
+	irq_line[].ena  = cfg_wr  &  adi[7..2] == 15  & !cbe0;
+
+	ioen_rg.(clk, %prn%clrn, d) = (clk, /rst, ad0);
+	ioen_rg.ena  = (cfg_wr	&  adi[7..2] == 1  &  !cbe0);
+
+	r_outd.(clk, clrn) = (clk, /rst);
+	r_outd.j = (cur_st == ST_CMP_ADDR)  &  (is_io # is_cfg)  &  !c_wr.q;
+	r_outd.k = d_trdy  &  !/irdy;
+
+	out_data[].in = res_data[];
+	out_data[].oe = r_outd.q;
+	ad[] = out_data[].out;
+
+	% содержимое cmd_rg доступно для записи с шины по адресу
+	  base+12h; 
+	%
+	cmd_rg[].clk  = clk;
+	cmd_rg[].clrn = /rst;
+	cmd_rg[].d    = ad[23..16];
+	cmd_rg[].ena  = d_trdy & c_io.q & adi4.q & c_wr.q & !cbe2;
+
+	control_rg[].clk  = clk;
+	control_rg[].clrn = /rst;
+	control_rg[].d    = ad[7..0];
+	control_rg[].ena  = d_trdy & c_io.q & adi4.q & c_wr.q & !cbe0;
+
+	control_r[].clk  = clk;
+	control_r[].clrn = /rst;
+	control_r[].d    = ad[15..8];
+	control_r[].ena  = d_trdy & c_io.q & adi4.q & c_wr.q & !cbe1;
+	
+	intrpt_mask.(clk,clrn) = (clk, /rst);
+	intrpt_mask.d = ad31;
+	intrpt_mask.ena = d_trdy & c_io.q & adi4.q & c_wr.q & !cbe3;
+	
+	ident_intrpt[].clk = clk;
+	ident_intrpt[].clrn = /rst;
+	ident_intrpt[7..0].d = 165;
+	ident_intrpt[].ena = (xf_rg.q & intrpt_mask.q);
+
+	xf_rg.(clk, clrn, j) = (clk, /rst, dsp_xf);
+	xf_rg.k = ad26 & d_trdy & c_io.q & adi4.q & c_wr.q & !cbe3;
+
+	/inta = OPNDRN( !(xf_rg.q & intrpt_mask.q) );
+
+	CASE cur_st IS
+	WHEN ST_IDLE, ST_TURN_AR =>
+
+		IF !/frame THEN
+			cur_st = ST_CMP_ADDR;
+		ELSE
+			cur_st = ST_IDLE;
+		END IF;
+
+	WHEN ST_CMP_ADDR =>
+
+		IF is_io # is_cfg THEN
+			cur_st = ST_S_DATA;
+		ELSE
+			cur_st = ST_B_BUSY;
+		END IF;
+
+	WHEN ST_S_DATA =>
+
+		IF  d_trdy  &  !/irdy  THEN
+			IF /frame THEN
+				cur_st = ST_TURN_AR;
+			ELSE
+				cur_st = ST_BACKOFF;
+			END IF;         	
+		ELSE
+			cur_st = ST_S_DATA;
+		END IF;
+
+	WHEN ST_BACKOFF =>
+
+		IF /frame THEN
+			cur_st = ST_TURN_AR;
+		ELSE
+			cur_st = ST_BACKOFF;
+		END IF;
+
+	WHEN ST_B_BUSY =>
+
+		IF !/frame THEN
+			cur_st = ST_B_BUSY;
+		ELSE
+			cur_st = ST_IDLE;
+		END IF;
+
+	WHEN OTHERS =>		% ST_TURN_AR and illegal states %
+		cur_st = ST_IDLE;
+
+	END CASE;
+
+	d_dat[31..0].in = out_data[31..0].out;
+	d_dat[].oe = d_trdy & c_io.q & !adi4.q & c_wr.q & !cbe0;
+	dsp_d[]    = d_dat[].out;
+
+	--dsp_rs  = (cbe[3..1] == B"101")	& idsel;
+	dsp_rs  = is_io;
+	control[7..0] = control_rg[7..0];
+	control[15..8] = control_r[7..0];
+	cmd[7..0] = cmd_rg[7..0];
+	write_d = !(d_trdy & c_io.q & !adi4.q & c_wr.q & !cbe0);
+--	control0 = c_wr.q;
+--	control1 = is_io;
+--	control2 = d_trdy;
+	read_d = !(r_outd.q & !adi4.q);
+--	read_d = is_io;
+	par = r_outd.q;
+END;
