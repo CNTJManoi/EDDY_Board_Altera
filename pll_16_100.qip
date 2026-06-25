@@ -1,0 +1,6 @@
+set_global_assignment -name IP_TOOL_NAME "ALTPLL"
+set_global_assignment -name IP_TOOL_VERSION "11.0"
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "pll_16_100.tdf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "pll_16_100.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "pll_16_100.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "pll_16_100.ppf"]

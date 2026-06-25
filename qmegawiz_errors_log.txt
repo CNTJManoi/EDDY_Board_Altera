@@ -1,0 +1,6 @@
+
+
+E:/altera/81/quartus/User_library/lpm_dff8.tdf
+
+Jun 06 07PM:02:04>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

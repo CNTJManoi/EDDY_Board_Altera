@@ -1,0 +1,413 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'n/a'
+Slack : 0.506
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'ADC2_DCO'
+Slack : 0.960
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'ADC1_DCO'
+Slack : 1.039
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'ADC3_DCO'
+Slack : 1.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'ADC0_DCO'
+Slack : 1.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.943
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'DAC_CAPTURE'
+Slack : 5.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'SCK'
+Slack : 6.957
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ADC3_DCO'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ADC1_DCO'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ADC0_DCO'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ADC2_DCO'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SCK'
+Slack : 0.443
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'DAC_CAPTURE'
+Slack : 6.225
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'ADC1_DCO'
+Slack : 11.148
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'ADC2_DCO'
+Slack : 11.419
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'ADC0_DCO'
+Slack : 11.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'ADC3_DCO'
+Slack : 11.570
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 13.985
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ADC1_DCO'
+Slack : 3.318
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ADC3_DCO'
+Slack : 3.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ADC2_DCO'
+Slack : 3.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ADC0_DCO'
+Slack : 3.503
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 7.480
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ADC3_DCO'
+Slack : 7.514
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ADC2_DCO'
+Slack : 7.515
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ADC0_DCO'
+Slack : 7.516
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ADC1_DCO'
+Slack : 7.519
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DAC_CAPTURE'
+Slack : 11.181
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCK'
+Slack : 18.205
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK16'
+Slack : 31.141
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SPI4_SCK'
+Slack : 33.037
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'n/a'
+Slack : 1.007
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'ADC2_DCO'
+Slack : 1.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'ADC1_DCO'
+Slack : 1.514
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'ADC3_DCO'
+Slack : 1.829
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'ADC0_DCO'
+Slack : 1.833
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'DAC_CAPTURE'
+Slack : 5.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 5.607
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'SCK'
+Slack : 7.970
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ADC3_DCO'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ADC0_DCO'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ADC1_DCO'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ADC2_DCO'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SCK'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'DAC_CAPTURE'
+Slack : 6.214
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'ADC1_DCO'
+Slack : 11.547
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'ADC0_DCO'
+Slack : 11.809
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'ADC2_DCO'
+Slack : 11.812
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'ADC3_DCO'
+Slack : 11.936
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 14.142
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.997
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ADC1_DCO'
+Slack : 2.965
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ADC3_DCO'
+Slack : 2.980
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ADC2_DCO'
+Slack : 3.119
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ADC0_DCO'
+Slack : 3.126
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 7.490
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ADC3_DCO'
+Slack : 7.520
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ADC2_DCO'
+Slack : 7.523
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ADC0_DCO'
+Slack : 7.524
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ADC1_DCO'
+Slack : 7.525
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DAC_CAPTURE'
+Slack : 11.181
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCK'
+Slack : 18.068
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK16'
+Slack : 31.134
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SPI4_SCK'
+Slack : 33.037
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'n/a'
+Slack : 3.806
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ADC2_DCO'
+Slack : 4.486
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ADC1_DCO'
+Slack : 4.505
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ADC3_DCO'
+Slack : 4.652
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ADC0_DCO'
+Slack : 4.679
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'DAC_CAPTURE'
+Slack : 5.419
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 10.912
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'SCK'
+Slack : 12.389
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.117
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ADC3_DCO'
+Slack : 0.124
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ADC1_DCO'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ADC2_DCO'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ADC0_DCO'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SCK'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'DAC_CAPTURE'
+Slack : 6.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ADC1_DCO'
+Slack : 13.506
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ADC2_DCO'
+Slack : 13.603
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ADC0_DCO'
+Slack : 13.606
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ADC3_DCO'
+Slack : 13.692
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 14.890
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.477
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ADC1_DCO'
+Slack : 1.561
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ADC3_DCO'
+Slack : 1.569
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ADC0_DCO'
+Slack : 1.628
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ADC2_DCO'
+Slack : 1.643
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ADC3_DCO'
+Slack : 7.189
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ADC2_DCO'
+Slack : 7.190
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ADC0_DCO'
+Slack : 7.191
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ADC1_DCO'
+Slack : 7.192
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 7.565
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DAC_CAPTURE'
+Slack : 11.625
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCK'
+Slack : 17.646
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK16'
+Slack : 30.650
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SPI4_SCK'
+Slack : 33.037
+TNS   : 0.000
+
+------------------------------------------------------------

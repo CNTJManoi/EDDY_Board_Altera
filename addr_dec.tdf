@@ -1,0 +1,35 @@
+
+% проверка старших разрядов адреса на совпадение с нашим базовым адресом,
+  и кода команды на совпадение с I/O port %
+
+SUBDESIGN addr_dec
+(
+	clk, do_store :		INPUT;
+	cbe[3..0], ad[31..0] :	INPUT;
+	base_addr[10..0] :	INPUT;
+
+	is_io :			OUTPUT;
+)
+
+VARIABLE
+	c_io_p[10..0] :		DFFE;
+
+BEGIN
+	c_io_p[].clk = clk;
+	c_io_p[].ena = do_store;
+	c_io_p0.d = (ad5 $ base_addr0) # (ad6 $ base_addr1);
+	c_io_p1.d = (ad7 $ base_addr2) # (ad8 $ base_addr3);
+	c_io_p2.d = (ad9 $ base_addr4) # (ad10 $ base_addr5);
+	c_io_p3.d = (ad11 $ base_addr6) # (ad12 $ base_addr7);
+	c_io_p4.d = (ad13 $ base_addr8) # (ad14 $ base_addr9);
+	c_io_p5.d = (ad15 $ base_addr10) # !cbe1 # cbe2;
+	c_io_p6.d = cbe3 # ad16 # ad17 # ad18;
+	c_io_p7.d = ad19 # ad20 # ad21 # ad22;
+	c_io_p8.d = ad23 # ad24 # ad25 # ad26;
+	c_io_p9.d = ad27 # ad28 # ad29 # ad30;
+	c_io_p10.d = ad31;
+
+	is_io = !(c_io_p0.q # c_io_p1.q # c_io_p2.q # c_io_p3.q # c_io_p4.q
+		# c_io_p5.q # c_io_p6.q # c_io_p7.q # c_io_p8.q
+		# c_io_p9.q # c_io_p10.q);
+END;

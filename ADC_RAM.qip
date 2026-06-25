@@ -1,0 +1,5 @@
+set_global_assignment -name IP_TOOL_NAME "FIFO"
+set_global_assignment -name IP_TOOL_VERSION "8.1"
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ADC_RAM.tdf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ADC_RAM.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ADC_RAM.inc"]

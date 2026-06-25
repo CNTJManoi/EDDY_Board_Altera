@@ -1,0 +1,713 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -13.221
+TNS   : -803.359
+
+Type  : Slow 1200mV 85C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -12.002
+TNS   : -533.160
+
+Type  : Slow 1200mV 85C Model Setup 'inst54'
+Slack : -11.377
+TNS   : -320.199
+
+Type  : Slow 1200mV 85C Model Setup 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -4.908
+TNS   : -210.241
+
+Type  : Slow 1200mV 85C Model Setup 'C0DCO'
+Slack : -3.929
+TNS   : -526.941
+
+Type  : Slow 1200mV 85C Model Setup 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -3.899
+TNS   : -53.616
+
+Type  : Slow 1200mV 85C Model Setup 'cbe[0]'
+Slack : -1.730
+TNS   : -14.801
+
+Type  : Slow 1200mV 85C Model Setup 'imp_former1:inst95|trg[1]'
+Slack : -1.610
+TNS   : -18.865
+
+Type  : Slow 1200mV 85C Model Setup 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -0.935
+TNS   : -5.972
+
+Type  : Slow 1200mV 85C Model Hold 'cbe[0]'
+Slack : -6.066
+TNS   : -72.945
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -4.627
+TNS   : -153.926
+
+Type  : Slow 1200mV 85C Model Hold 'C0DCO'
+Slack : -2.614
+TNS   : -181.201
+
+Type  : Slow 1200mV 85C Model Hold 'inst54'
+Slack : -1.921
+TNS   : -49.050
+
+Type  : Slow 1200mV 85C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.347
+TNS   : -35.856
+
+Type  : Slow 1200mV 85C Model Hold 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -0.252
+TNS   : -0.352
+
+Type  : Slow 1200mV 85C Model Hold 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -0.212
+TNS   : -1.099
+
+Type  : Slow 1200mV 85C Model Hold 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -0.068
+TNS   : -0.159
+
+Type  : Slow 1200mV 85C Model Hold 'imp_former1:inst95|trg[1]'
+Slack : 0.739
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -6.881
+TNS   : -76.862
+
+Type  : Slow 1200mV 85C Model Recovery 'ADC_RAM:inst3|scfifo:scfifo_component|scfifo_9941:auto_generated|a_dpfifo_gf41:dpfifo|a_fefifo_mcf:fifo_state|b_full'
+Slack : -4.919
+TNS   : -4.919
+
+Type  : Slow 1200mV 85C Model Recovery 'inst60'
+Slack : -4.334
+TNS   : -4.334
+
+Type  : Slow 1200mV 85C Model Recovery 'inst54'
+Slack : -3.945
+TNS   : -52.740
+
+Type  : Slow 1200mV 85C Model Recovery 'inst62'
+Slack : -3.810
+TNS   : -3.810
+
+Type  : Slow 1200mV 85C Model Recovery 'count_dac:inst17|lpm_counter:lpm_counter_component|cntr_3cj:auto_generated|counter_reg_bit[0]'
+Slack : -2.188
+TNS   : -2.188
+
+Type  : Slow 1200mV 85C Model Recovery 'inst63'
+Slack : -2.060
+TNS   : -3.083
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -0.628
+TNS   : -1.256
+
+Type  : Slow 1200mV 85C Model Recovery 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -0.627
+TNS   : -3.662
+
+Type  : Slow 1200mV 85C Model Recovery 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -0.627
+TNS   : -1.254
+
+Type  : Slow 1200mV 85C Model Recovery 'cbe[0]'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'C0DCO'
+Slack : 0.493
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : 0.949
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'cbe[0]'
+Slack : -3.508
+TNS   : -11.066
+
+Type  : Slow 1200mV 85C Model Removal 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -1.540
+TNS   : -20.014
+
+Type  : Slow 1200mV 85C Model Removal 'C0DCO'
+Slack : -0.658
+TNS   : -26.673
+
+Type  : Slow 1200mV 85C Model Removal 'ADC_RAM:inst3|scfifo:scfifo_component|scfifo_9941:auto_generated|a_dpfifo_gf41:dpfifo|a_fefifo_mcf:fifo_state|b_full'
+Slack : 0.765
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : 1.077
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 1.092
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : 1.092
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst63'
+Slack : 1.266
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'count_dac:inst17|lpm_counter:lpm_counter_component|cntr_3cj:auto_generated|counter_reg_bit[0]'
+Slack : 1.431
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst60'
+Slack : 2.832
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst54'
+Slack : 3.751
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.947
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst62'
+Slack : 4.154
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'C0DCO'
+Slack : -3.201
+TNS   : -449.245
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -315.882
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst54'
+Slack : -3.201
+TNS   : -155.260
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cbe[0]'
+Slack : -3.000
+TNS   : -25.341
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -1.487
+TNS   : -81.785
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -1.487
+TNS   : -23.792
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -1.487
+TNS   : -20.818
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst63'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'count_dac:inst17|lpm_counter:lpm_counter_component|cntr_3cj:auto_generated|counter_reg_bit[0]'
+Slack : -1.487
+TNS   : -1.587
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ADC_RAM:inst3|scfifo:scfifo_component|scfifo_9941:auto_generated|a_dpfifo_gf41:dpfifo|a_fefifo_mcf:fifo_state|b_full'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst60'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst62'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'imp_former1:inst95|trg[1]'
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.590
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width '16MHz'
+Slack : 31.141
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -12.293
+TNS   : -748.644
+
+Type  : Slow 1200mV 0C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -11.002
+TNS   : -478.759
+
+Type  : Slow 1200mV 0C Model Setup 'inst54'
+Slack : -10.566
+TNS   : -295.838
+
+Type  : Slow 1200mV 0C Model Setup 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -4.532
+TNS   : -192.746
+
+Type  : Slow 1200mV 0C Model Setup 'C0DCO'
+Slack : -3.734
+TNS   : -489.903
+
+Type  : Slow 1200mV 0C Model Setup 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -3.550
+TNS   : -48.755
+
+Type  : Slow 1200mV 0C Model Setup 'imp_former1:inst95|trg[1]'
+Slack : -1.554
+TNS   : -17.602
+
+Type  : Slow 1200mV 0C Model Setup 'cbe[0]'
+Slack : -1.426
+TNS   : -11.884
+
+Type  : Slow 1200mV 0C Model Setup 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -0.608
+TNS   : -4.005
+
+Type  : Slow 1200mV 0C Model Hold 'cbe[0]'
+Slack : -5.682
+TNS   : -68.708
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -4.239
+TNS   : -138.704
+
+Type  : Slow 1200mV 0C Model Hold 'C0DCO'
+Slack : -2.327
+TNS   : -158.275
+
+Type  : Slow 1200mV 0C Model Hold 'inst54'
+Slack : -1.759
+TNS   : -43.890
+
+Type  : Slow 1200mV 0C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.370
+TNS   : -39.229
+
+Type  : Slow 1200mV 0C Model Hold 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -0.284
+TNS   : -0.367
+
+Type  : Slow 1200mV 0C Model Hold 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -0.279
+TNS   : -1.717
+
+Type  : Slow 1200mV 0C Model Hold 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -0.175
+TNS   : -0.732
+
+Type  : Slow 1200mV 0C Model Hold 'imp_former1:inst95|trg[1]'
+Slack : 0.778
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -6.196
+TNS   : -67.333
+
+Type  : Slow 1200mV 0C Model Recovery 'ADC_RAM:inst3|scfifo:scfifo_component|scfifo_9941:auto_generated|a_dpfifo_gf41:dpfifo|a_fefifo_mcf:fifo_state|b_full'
+Slack : -4.377
+TNS   : -4.377
+
+Type  : Slow 1200mV 0C Model Recovery 'inst60'
+Slack : -3.909
+TNS   : -3.909
+
+Type  : Slow 1200mV 0C Model Recovery 'inst54'
+Slack : -3.525
+TNS   : -47.190
+
+Type  : Slow 1200mV 0C Model Recovery 'inst62'
+Slack : -3.383
+TNS   : -3.383
+
+Type  : Slow 1200mV 0C Model Recovery 'count_dac:inst17|lpm_counter:lpm_counter_component|cntr_3cj:auto_generated|counter_reg_bit[0]'
+Slack : -1.928
+TNS   : -1.928
+
+Type  : Slow 1200mV 0C Model Recovery 'inst63'
+Slack : -1.871
+TNS   : -2.711
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -0.474
+TNS   : -0.948
+
+Type  : Slow 1200mV 0C Model Recovery 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -0.474
+TNS   : -0.948
+
+Type  : Slow 1200mV 0C Model Recovery 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -0.473
+TNS   : -2.750
+
+Type  : Slow 1200mV 0C Model Recovery 'C0DCO'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'cbe[0]'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : 1.049
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'cbe[0]'
+Slack : -3.519
+TNS   : -10.953
+
+Type  : Slow 1200mV 0C Model Removal 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -1.469
+TNS   : -19.202
+
+Type  : Slow 1200mV 0C Model Removal 'C0DCO'
+Slack : -0.616
+TNS   : -24.977
+
+Type  : Slow 1200mV 0C Model Removal 'ADC_RAM:inst3|scfifo:scfifo_component|scfifo_9941:auto_generated|a_dpfifo_gf41:dpfifo|a_fefifo_mcf:fifo_state|b_full'
+Slack : 0.679
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : 0.977
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 0.998
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : 0.998
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst63'
+Slack : 1.168
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'count_dac:inst17|lpm_counter:lpm_counter_component|cntr_3cj:auto_generated|counter_reg_bit[0]'
+Slack : 1.318
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst60'
+Slack : 2.566
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst54'
+Slack : 3.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst62'
+Slack : 3.792
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'C0DCO'
+Slack : -3.201
+TNS   : -449.245
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -315.882
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst54'
+Slack : -3.201
+TNS   : -155.283
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cbe[0]'
+Slack : -3.000
+TNS   : -25.497
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -1.487
+TNS   : -81.785
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -1.487
+TNS   : -23.792
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -1.487
+TNS   : -21.358
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst63'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'count_dac:inst17|lpm_counter:lpm_counter_component|cntr_3cj:auto_generated|counter_reg_bit[0]'
+Slack : -1.487
+TNS   : -1.724
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ADC_RAM:inst3|scfifo:scfifo_component|scfifo_9941:auto_generated|a_dpfifo_gf41:dpfifo|a_fefifo_mcf:fifo_state|b_full'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst60'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst62'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'imp_former1:inst95|trg[1]'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width '16MHz'
+Slack : 31.134
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -5.010
+TNS   : -281.308
+
+Type  : Fast 1200mV 0C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.754
+TNS   : -235.407
+
+Type  : Fast 1200mV 0C Model Setup 'inst54'
+Slack : -4.228
+TNS   : -134.009
+
+Type  : Fast 1200mV 0C Model Setup 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -1.649
+TNS   : -57.592
+
+Type  : Fast 1200mV 0C Model Setup 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -1.252
+TNS   : -15.274
+
+Type  : Fast 1200mV 0C Model Setup 'C0DCO'
+Slack : -1.218
+TNS   : -151.448
+
+Type  : Fast 1200mV 0C Model Setup 'imp_former1:inst95|trg[1]'
+Slack : -0.258
+TNS   : -1.406
+
+Type  : Fast 1200mV 0C Model Setup 'cbe[0]'
+Slack : -0.192
+TNS   : -0.560
+
+Type  : Fast 1200mV 0C Model Setup 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -0.008
+TNS   : -0.008
+
+Type  : Fast 1200mV 0C Model Hold 'cbe[0]'
+Slack : -3.105
+TNS   : -37.612
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -2.546
+TNS   : -90.285
+
+Type  : Fast 1200mV 0C Model Hold 'inst54'
+Slack : -1.290
+TNS   : -34.336
+
+Type  : Fast 1200mV 0C Model Hold 'C0DCO'
+Slack : -1.186
+TNS   : -81.831
+
+Type  : Fast 1200mV 0C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.767
+TNS   : -17.365
+
+Type  : Fast 1200mV 0C Model Hold 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -0.262
+TNS   : -0.514
+
+Type  : Fast 1200mV 0C Model Hold 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -0.205
+TNS   : -1.282
+
+Type  : Fast 1200mV 0C Model Hold 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'imp_former1:inst95|trg[1]'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.840
+TNS   : -31.568
+
+Type  : Fast 1200mV 0C Model Recovery 'ADC_RAM:inst3|scfifo:scfifo_component|scfifo_9941:auto_generated|a_dpfifo_gf41:dpfifo|a_fefifo_mcf:fifo_state|b_full'
+Slack : -1.723
+TNS   : -1.723
+
+Type  : Fast 1200mV 0C Model Recovery 'inst60'
+Slack : -1.690
+TNS   : -1.690
+
+Type  : Fast 1200mV 0C Model Recovery 'inst54'
+Slack : -1.366
+TNS   : -17.824
+
+Type  : Fast 1200mV 0C Model Recovery 'inst62'
+Slack : -1.223
+TNS   : -1.223
+
+Type  : Fast 1200mV 0C Model Recovery 'count_dac:inst17|lpm_counter:lpm_counter_component|cntr_3cj:auto_generated|counter_reg_bit[0]'
+Slack : -0.563
+TNS   : -0.563
+
+Type  : Fast 1200mV 0C Model Recovery 'inst63'
+Slack : -0.363
+TNS   : -0.363
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : 0.269
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : 0.563
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'C0DCO'
+Slack : 0.713
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'cbe[0]'
+Slack : 0.788
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'cbe[0]'
+Slack : -1.315
+TNS   : -7.017
+
+Type  : Fast 1200mV 0C Model Removal 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -0.683
+TNS   : -9.020
+
+Type  : Fast 1200mV 0C Model Removal 'C0DCO'
+Slack : -0.448
+TNS   : -18.571
+
+Type  : Fast 1200mV 0C Model Removal 'ADC_RAM:inst3|scfifo:scfifo_component|scfifo_9941:auto_generated|a_dpfifo_gf41:dpfifo|a_fefifo_mcf:fifo_state|b_full'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst63'
+Slack : 0.464
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : 0.477
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : 0.477
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'count_dac:inst17|lpm_counter:lpm_counter_component|cntr_3cj:auto_generated|counter_reg_bit[0]'
+Slack : 0.612
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst60'
+Slack : 1.221
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst54'
+Slack : 1.777
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst62'
+Slack : 1.918
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.983
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'C0DCO'
+Slack : -3.000
+TNS   : -229.320
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -213.385
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cbe[0]'
+Slack : -3.000
+TNS   : -26.619
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst54'
+Slack : -1.000
+TNS   : -56.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[1]'
+Slack : -1.000
+TNS   : -55.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 't_count:inst40|lpm_counter:lpm_counter_component|cntr_c7i:auto_generated|counter_reg_bit[2]'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lpm_counter0:inst6|lpm_counter:lpm_counter_component|cntr_eph:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst63'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ADC_RAM:inst3|scfifo:scfifo_component|scfifo_9941:auto_generated|a_dpfifo_gf41:dpfifo|a_fefifo_mcf:fifo_state|b_full'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'count_dac:inst17|lpm_counter:lpm_counter_component|cntr_3cj:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst60'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst62'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'imp_former1:inst95|trg[1]'
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.584
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width '16MHz'
+Slack : 30.650
+TNS   : 0.000
+
+------------------------------------------------------------

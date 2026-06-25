@@ -1,0 +1,286 @@
+# Copyright (C) 1991-2008 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Altera Program License
+# Subscription Agreement, Altera MegaCore Function License
+# Agreement, or other applicable license agreement, including,
+# without limitation, that your use is for the sole purpose of
+# programming logic devices manufactured by Altera and sold by
+# Altera or its authorized distributors.  Please refer to the
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		Eddy_c_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY Eddy_c
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 11.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:26:26  JUNE 04, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ENABLE_ADVANCED_IO_TIMING ON
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name FORCE_CONFIGURATION_VCCIO ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVCMOS"
+set_global_assignment -name MISC_FILE "E:/altera/81/quartus/Rail_Tester/Rail_Tester.dpf"
+set_location_assignment PIN_R22 -to DAC_CLKN
+set_location_assignment PIN_R21 -to DAC_CLKP
+set_location_assignment PIN_G22 -to 16MHz
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name CYCLONEIII_CONFIGURATION_DEVICE EPCS64
+set_instance_assignment -name IO_STANDARD "2.5 V" -to DAC_CLKP
+set_instance_assignment -name IO_STANDARD "2.5 V" -to DAC_CLKN
+set_location_assignment PIN_H22 -to DD[13]
+set_location_assignment PIN_H21 -to DD[12]
+set_location_assignment PIN_J22 -to DD[11]
+set_location_assignment PIN_J21 -to DD[10]
+set_location_assignment PIN_K22 -to DD[9]
+set_location_assignment PIN_K21 -to DD[8]
+set_location_assignment PIN_L22 -to DD[7]
+set_location_assignment PIN_L21 -to DD[6]
+set_location_assignment PIN_M22 -to DD[5]
+set_location_assignment PIN_M21 -to DD[4]
+set_location_assignment PIN_N22 -to DD[3]
+set_location_assignment PIN_N21 -to DD[2]
+set_location_assignment PIN_P22 -to DD[1]
+set_location_assignment PIN_P21 -to DD[0]
+set_location_assignment PIN_F21 -to TEST0
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_location_assignment PIN_F22 -to TEST1
+set_location_assignment PIN_E21 -to TEST2
+set_location_assignment PIN_E22 -to TEST3
+# --- Verilog structural copy of Eddy_c.bdf (top entity Eddy_c) ---
+# Original schematic kept on disk as Eddy_c.bdf for reference (NOT compiled).
+set_global_assignment -name VERILOG_FILE Eddy_c.v
+set_global_assignment -name VERILOG_FILE dff_prim.v
+set_global_assignment -name VERILOG_FILE adc_chan.v
+set_global_assignment -name VERILOG_FILE dac_play_ram.v
+set_global_assignment -name VERILOG_FILE four_point_ctrl.v
+set_global_assignment -name VERILOG_FILE four_point_channel.v
+set_global_assignment -name VERILOG_FILE amp_spi_router.v
+# Leaf modules copied from User_library / present in project:
+set_global_assignment -name AHDL_FILE dc16.tdf
+set_global_assignment -name AHDL_FILE dc_24.tdf
+set_global_assignment -name AHDL_FILE mux21.tdf
+set_global_assignment -name AHDL_FILE mux4_1.tdf
+set_global_assignment -name AHDL_FILE imp_former1.tdf
+set_global_assignment -name AHDL_FILE cmp8.tdf
+set_global_assignment -name AHDL_FILE constA5.tdf
+set_global_assignment -name AHDL_FILE lpm_counter0.tdf
+set_global_assignment -name AHDL_FILE adc_cmp_h.tdf
+set_global_assignment -name VHDL_FILE 74165_a.vhd
+set_global_assignment -name VHDL_FILE count256.vhd
+set_global_assignment -name VHDL_FILE cnt8.vhd
+set_global_assignment -name VHDL_FILE compar_addr.vhd
+# --- SPI high-speed timing (experiment toward 54 MHz SCK) ---
+set_global_assignment -name SDC_FILE Eddy_c.sdc
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to PB4
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to PA5
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to DD[*]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to DAC_CLKN
+# Do not force the rising-DCO capture registers into the IOEs. The DCO pins use
+# a global route; forcing data into IOEs creates excessive clock skew and hold
+# violations. Core placement lets the Fitter balance/delay these short paths.
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to C0D[*]
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to C1D[*]
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to C2D[*]
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to C3D[*]
+set_global_assignment -name QIP_FILE pll_16_100.qip
+set_global_assignment -name QIP_FILE ADC_RAM.qip
+set_global_assignment -name QIP_FILE DAC_RAM.qip
+set_global_assignment -name QIP_FILE mux16_2.qip
+set_global_assignment -name QIP_FILE count_dac.qip
+set_global_assignment -name QIP_FILE hex_ff.qip
+set_global_assignment -name QIP_FILE t_count.qip
+set_location_assignment PIN_A4 -to C0D[3]
+set_location_assignment PIN_A5 -to C0D[6]
+set_location_assignment PIN_A6 -to C0D[11]
+set_location_assignment PIN_A8 -to C1D[3]
+set_location_assignment PIN_A9 -to C1D[9]
+set_location_assignment PIN_A10 -to C1D[11]
+set_location_assignment PIN_A11 -to C1DCO
+set_location_assignment PIN_A12 -to C3DCO
+set_location_assignment PIN_A14 -to C2D[3]
+set_location_assignment PIN_A15 -to C2D[7]
+set_location_assignment PIN_A17 -to C3D[3]
+set_location_assignment PIN_A18 -to C3D[4]
+set_location_assignment PIN_A19 -to C3D[8]
+set_location_assignment PIN_A20 -to C3D[12]
+set_location_assignment PIN_B4 -to C0D[2]
+set_location_assignment PIN_B5 -to C0D[5]
+set_location_assignment PIN_B6 -to C0D[10]
+set_location_assignment PIN_B8 -to C1D[2]
+set_location_assignment PIN_B9 -to C1D[8]
+set_location_assignment PIN_B10 -to C1D[10]
+set_location_assignment PIN_B11 -to C0DCO
+set_location_assignment PIN_B12 -to C2DCO
+set_location_assignment PIN_B14 -to C2D[2]
+set_location_assignment PIN_B15 -to C2D[8]
+set_location_assignment PIN_B17 -to C3D[0]
+set_location_assignment PIN_B18 -to C3D[5]
+set_location_assignment PIN_B19 -to C3D[7]
+set_location_assignment PIN_B20 -to C3D[13]
+set_location_assignment PIN_C3 -to C0D[0]
+set_location_assignment PIN_C4 -to C0D[4]
+set_location_assignment PIN_C6 -to C0D[9]
+set_location_assignment PIN_C7 -to C0D[13]
+set_location_assignment PIN_C8 -to C1D[1]
+set_location_assignment PIN_C10 -to C1D[13]
+set_location_assignment PIN_C13 -to C2D[4]
+set_location_assignment PIN_C15 -to C2D[13]
+set_location_assignment PIN_C17 -to C3D[2]
+set_location_assignment PIN_C18 -to C3D[9]
+set_location_assignment PIN_C19 -to C3D[11]
+set_location_assignment PIN_D6 -to C0D[8]
+set_location_assignment PIN_D7 -to C0D[12]
+set_location_assignment PIN_D8 -to C1D[0]
+set_location_assignment PIN_D10 -to C1D[12]
+set_location_assignment PIN_D13 -to C2D[1]
+set_location_assignment PIN_D15 -to C2D[12]
+set_location_assignment PIN_D17 -to C3D[1]
+set_location_assignment PIN_D18 -to C3D[6]
+set_location_assignment PIN_D19 -to C3D[10]
+set_location_assignment PIN_E5 -to C0D[1]
+set_location_assignment PIN_E6 -to C0D[7]
+set_location_assignment PIN_E7 -to C1D[4]
+set_location_assignment PIN_E8 -to C1D[5]
+set_location_assignment PIN_E9 -to C1D[6]
+set_location_assignment PIN_E11 -to C2D[0]
+set_location_assignment PIN_E12 -to C2D[5]
+set_location_assignment PIN_E13 -to C2D[6]
+set_location_assignment PIN_E14 -to C2D[9]
+set_location_assignment PIN_E15 -to C2D[10]
+set_location_assignment PIN_E16 -to C2D[11]
+set_location_assignment PIN_F9 -to C1D[7]
+set_location_assignment PIN_AA11 -to BRD[2]
+set_location_assignment PIN_AA12 -to BRD[0]
+set_location_assignment PIN_AB11 -to BRD[3]
+set_location_assignment PIN_AB12 -to BRD[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to DD[5]
+set_global_assignment -name MISC_FILE "C:/altera/11.0/quartus/Eddy_c/Rail_Tester.dpf"
+set_instance_assignment -name IO_STANDARD "2.5 V" -to DD[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to DD[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to DD[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to DD[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to DD[0]
+set_global_assignment -name MISC_FILE "C:/altera/11.0/quartus/Eddy_c/Eddy_c.dpf"
+set_location_assignment PIN_D21 -to DAC_CLK
+set_location_assignment PIN_D22 -to DAC_DATA
+set_location_assignment PIN_A3 -to ADC0_CLKN
+set_location_assignment PIN_B3 -to ADC0_CLKP
+set_location_assignment PIN_A7 -to ADC1_CLKN
+set_location_assignment PIN_B7 -to ADC1_CLKP
+set_location_assignment PIN_A13 -to ADC2_CLKN
+set_location_assignment PIN_B13 -to ADC2_CLKP
+set_location_assignment PIN_A16 -to ADC3_CLKN
+set_location_assignment PIN_B16 -to ADC3_CLKP
+set_instance_assignment -name IO_STANDARD LVDS_E_3R -to ADC0_CLKN
+set_instance_assignment -name IO_STANDARD LVDS_E_3R -to ADC0_CLKP
+set_instance_assignment -name IO_STANDARD LVDS_E_3R -to ADC1_CLKN
+set_instance_assignment -name IO_STANDARD LVDS_E_3R -to ADC1_CLKP
+set_instance_assignment -name IO_STANDARD LVDS_E_3R -to ADC2_CLKN
+set_instance_assignment -name IO_STANDARD LVDS_E_3R -to ADC2_CLKP
+set_instance_assignment -name IO_STANDARD LVDS_E_3R -to ADC3_CLKN
+set_instance_assignment -name IO_STANDARD LVDS_E_3R -to ADC3_CLKP
+# Banks 7/8 also drive the 2.5 V pseudo-differential ADC clocks, therefore
+# their VCCIO is 2.5 V and the matching receiver standard is required.
+set_instance_assignment -name IO_STANDARD "2.5 V" -to C0D[*]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to C0DCO
+set_instance_assignment -name IO_STANDARD "2.5 V" -to C1D[*]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to C1DCO
+set_instance_assignment -name IO_STANDARD "2.5 V" -to C2D[*]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to C2DCO
+set_instance_assignment -name IO_STANDARD "2.5 V" -to C3D[*]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to C3DCO
+set_location_assignment PIN_B21 -to DAC_CS[3]
+set_location_assignment PIN_B22 -to DAC_CS[2]
+set_location_assignment PIN_C22 -to DAC_CS[1]
+set_location_assignment PIN_C21 -to DAC_CS[0]
+set_global_assignment -name QIP_FILE mux13_4.qip
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS OFF
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_AB16 -to PB2
+set_location_assignment PIN_W14 -to PB5
+set_location_assignment PIN_AB7 -to PD[10]
+set_location_assignment PIN_AA7 -to PD[9]
+set_location_assignment PIN_AB8 -to PD[8]
+set_location_assignment PIN_W13 -to PD[7]
+set_location_assignment PIN_V13 -to PD[6]
+set_location_assignment PIN_V12 -to PD[5]
+set_location_assignment PIN_V11 -to PD[4]
+set_location_assignment PIN_V10 -to PD[3]
+set_location_assignment PIN_V9 -to PD[2]
+set_location_assignment PIN_W8 -to PD[1]
+set_location_assignment PIN_Y8 -to PD[0]
+set_global_assignment -name MISC_FILE "C:/altera/11.0/quartus/Eddy_c_arm/Eddy_c.dpf"
+set_global_assignment -name QIP_FILE lpm_shiftreg16.qip
+set_global_assignment -name QIP_FILE lpm_shiftreg_out.qip
+set_location_assignment PIN_AB18 -to PA4
+set_location_assignment PIN_AA17 -to PA5
+set_location_assignment PIN_V21 -to PE6
+set_location_assignment PIN_U20 -to PE2
+set_location_assignment PIN_U21 -to PE4
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PE2
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PE4
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PE6
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to DAC_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to DAC_DATA
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to DAC_CS[*]
+set_location_assignment PIN_Y13 -to PB4
+set_location_assignment PIN_Y14 -to PB6
+set_global_assignment -name AHDL_FILE mx_ctrl.tdf
+set_global_assignment -name SEARCH_PATH "c:\\altera\\11.0\\quartus\\user_library"
+set_global_assignment -name SEARCH_PATH "e:\\altera\\81\\quartus\\user_library/"
+set_global_assignment -name QIP_FILE mux16_4.qip
+set_global_assignment -name QIP_FILE constAA55.qip
+set_global_assignment -name MIF_FILE DAC.mif
+set_location_assignment PIN_P1 -to TEST4
+set_location_assignment PIN_R1 -to TEST5
+set_location_assignment PIN_E4 -to TEST6
+set_location_assignment PIN_G3 -to TEST7
+set_location_assignment PIN_H3 -to TEST8
+set_global_assignment -name QIP_FILE const_FFF.qip
+set_location_assignment PIN_J3 -to TEST9
+set_location_assignment PIN_N5 -to TEST10
+set_location_assignment PIN_P3 -to TEST11
+set_location_assignment PIN_P2 -to TEST12
+set_location_assignment PIN_R2 -to TEST13
+set_global_assignment -name MIF_FILE DAC1.mif
+set_location_assignment PIN_U1 -to TEST14
+set_location_assignment PIN_G5 -to TEST15
+set_global_assignment -name QIP_FILE mux16_8.qip
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+
+
+
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
